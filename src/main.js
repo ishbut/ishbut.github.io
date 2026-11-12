@@ -34,6 +34,15 @@ function filterPapers() {
 search?.addEventListener('input', filterPapers);
 year?.addEventListener('change', filterPapers);
 const topLink = document.querySelector('.back-to-top');
-const updateScroll = () => { topLink.hidden = window.scrollY < 450; };
-window.addEventListener('scroll', updateScroll, {passive:true});
-updateScroll();
+if (topLink) {
+  let anchorY = window.scrollY;
+  const updateScroll = () => {
+    const y = window.scrollY;
+    const delta = y - anchorY;
+    if (Math.abs(delta) < 4) return;
+    topLink.hidden = y < 200 || delta > 0;
+    anchorY = y;
+  };
+  window.addEventListener('scroll', updateScroll, {passive:true});
+  updateScroll();
+}
