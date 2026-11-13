@@ -11,28 +11,6 @@ document.addEventListener('keydown', event => {
     toggle.click(); toggle.focus();
   }
 });
-const search = document.querySelector('#paper-search');
-const year = document.querySelector('#paper-year');
-function filterPapers() {
-  const query = search.value.trim().toLowerCase();
-  let count = 0;
-  document.querySelectorAll('.publication-year').forEach(section => {
-    let visible = 0;
-    section.querySelectorAll('.paper').forEach(paper => {
-      const match = (year.value === 'all' || section.dataset.year === year.value) && paper.textContent.toLowerCase().includes(query);
-      paper.hidden = !match;
-      if (match) { visible++; count++; }
-    });
-    section.hidden = !visible;
-  });
-  document.querySelectorAll('#publications > div').forEach(category => {
-    category.hidden = ![...category.querySelectorAll('.publication-year')].some(section => !section.hidden);
-  });
-  document.querySelector('#paper-count').textContent = `${count} selected record${count === 1 ? '' : 's'}`;
-  document.querySelector('#no-results').hidden = count > 0;
-}
-search?.addEventListener('input', filterPapers);
-year?.addEventListener('change', filterPapers);
 const topLink = document.querySelector('.back-to-top');
 if (topLink) {
   let anchorY = window.scrollY;

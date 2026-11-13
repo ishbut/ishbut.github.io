@@ -1,69 +1,87 @@
-// Recent bibliographic records checked against publisher-deposited Crossref metadata,
-// conference records, university reports, and author manuscript archives on 2026-10-29.
+// Recent bibliographic records provided by the group (November 2026).
 // Record format: year, authors, title, venue, volume/pages, direct URL, status note.
+// Journal ranking annotations (CCF/JCR/CAS) are intentionally omitted.
 export const recentPapers = [
   [
     2026,
-    "Peng Yu, Yuzhu Wang, Yu Chen, Qing Ye, Mingwu Zhang",
-    "SAML: A Secure Anti-Money Laundering Scheme with Multi-Client Functional Encryption",
-    "CSS 2026",
+    "Mingwu Zhang, Chenguang Liu, Yudi Zhang",
+    "Dynamic deep packet inspection for secure middlebox on encrypted traffic with forward privacy",
+    "ICICS 2026",
+    "LNCS 17217, pp 180-197",
     "",
-    "https://nsclab.org/css2026/list.html",
-    "Accepted conference paper; Best Paper Award reported by HBUT. Proceedings pagination not yet verified."
+    ""
+  ],
+  [
+    2026,
+    "Hanchao Ku, Hikaru Tsuchida, Mingwu Zhang and Takashi Nishide",
+    "Fast MPC framework under Shamir's secret sharing with malicious security and two-thirds honest majority",
+    "ICICS 2026",
+    "LNCS 17218, pp 206-224",
+    "",
+    ""
+  ],
+  [
+    2026,
+    "Yu Chen, Rongmao Chen, Shaojing Fu, Mingwu Zhang and Yuexiang Yang",
+    "Secure optimization with asynchronous structured skyline predicates under vertical data federation",
+    "IEEE Transactions on Information Forensics and Security",
+    "21: 5400-5413",
+    "https://doi.org/10.1109/tifs.2026.3696555",
+    ""
   ],
   [
     2026,
     "Ke Cheng, Jixin Zhang, Haiyun Li, Zipeng Zhong, Mingwu Zhang, Zheng Qin",
-    "PPOM-Attack: A Substitute Model-Free Perturbation Prediction and Optimization Method for Black-Box Adversarial Attack Against Face Recognition",
+    "PPOM-Attack: A substitute model-free perturbation prediction and optimization method for black-box adversarial attack against face recognition",
     "IEEE Transactions on Information Forensics and Security",
-    "21: 2580–2595",
+    "21: 2580-2596",
     "https://doi.org/10.1109/tifs.2026.3666853",
     ""
   ],
   [
     2026,
     "Gang Shen, Zhenhua Han, Weizhi Meng, Mingwu Zhang",
-    "An Efficient, Identifiable and Abortable Multi-Party Signature Scheme for VANETs",
+    "An efficient, identifiable and abortable multi-party signature scheme for VANETs",
     "IEEE Transactions on Vehicular Technology",
-    "75(7): 14849–14861",
+    "75(7): 14849-14861",
     "https://doi.org/10.1109/tvt.2026.3664438",
     ""
   ],
   [
     2026,
-    "Yu Chen, Rongmao Chen, Shaojing Fu, Mingwu Zhang, Yuexiang Yang",
-    "Secure Optimization With Asynchronous Structured Skyline Predicates Under Vertical Data Federation",
-    "IEEE Transactions on Information Forensics and Security",
-    "21: 5400–5413",
-    "https://doi.org/10.1109/tifs.2026.3696555",
-    ""
-  ],
-  [
-    2026,
-    "Yanwei Zhou, Zirui Qiao, Bo Yang, Zhe Xia, Mingwu Zhang",
-    "Leakage-Resilient Data Transmission Protocol With Multi-Receiver for Internet of Things",
-    "IEEE Transactions on Dependable and Secure Computing",
-    "23(2): 3101–3118",
-    "https://doi.org/10.1109/tdsc.2025.3632800",
-    ""
-  ],
-  [
-    2026,
     "Yanwei Zhou, Yasi Zhu, Zirui Qiao, Xianxiang Liu, Guangjin Zhang, Bo Yang, Tianqing Zhu, Mingwu Zhang",
-    "CLR-IA: An Efficient Identity Authentication Protocol With Continuous Leakage Resilience for Mobile Edge Computing",
+    "CLR-IA: an efficient identity authentication protocol with continuous leakage resilience for mobile edge computing",
     "IEEE Transactions on Dependable and Secure Computing",
-    "23(3): 5621–5636",
+    "23(3): 5621-5636",
     "https://doi.org/10.1109/tdsc.2026.3657345",
     ""
   ],
   [
     2026,
-    "Zixiao Xu, Yu Chen, Jilei Li, Tianqing Zhu, Mingwu Zhang",
+    "Yanwei Zhou, Zirui Qiao, Bo Yang, Zhe Xia, Mingwu Zhang",
+    "Leakage-resilient data transmission protocol with multi-receiver for internet of things",
+    "IEEE Transactions on Dependable and Secure Computing",
+    "23(2): 3101-3118",
+    "https://doi.org/10.1109/tdsc.2025.3632800",
+    ""
+  ],
+  [
+    2026,
+    "Hua Shen, Renzhi Chen, Zhe Xia, Willy Susilo, Mingwu Zhang",
+    "Privacy-preserving e-questionnaire protocol for massive user environments",
+    "Information Sciences",
+    "vol 760, no 124101",
+    "",
+    ""
+  ],
+  [
+    2026,
+    "Zixiao Xu, Yu Chen, Jilei Li, Tianqing Zhu, and Mingwu Zhang",
     "DFA-SAC: Enabling regular language policies with sanitizable access control",
     "Journal of Information Security and Applications",
-    "102: 104555",
+    "vol 102, 104555",
     "https://doi.org/10.1016/j.jisa.2026.104555",
-    "Assigned to the November 2026 issue; forthcoming issue date."
+    ""
   ],
   [
     2026,
@@ -72,6 +90,51 @@ export const recentPapers = [
     "Information Sciences",
     "753: 123619",
     "https://doi.org/10.1016/j.ins.2026.123619",
+    ""
+  ],
+  [
+    2026,
+    "Guangjin Zhang, Yanwei Zhou, Xianxiang Liu, Bo Yang, Mingwu Zhang",
+    "RCBPS: Revocable certificate-based proxy signature scheme in the standard model for secure cloud IoT communications",
+    "Computer Networks",
+    "280: 112181",
+    "",
+    ""
+  ],
+  [
+    2026,
+    "Yuqin Zhao, Xianxiang Liu, Yanwei Zhou, Bo Yang, Mingwu Zhang",
+    "A multi-receiver and multi-message anonymous ID-based hybrid signcryption scheme for secure data transmission",
+    "Cyber Security and Applications",
+    "4: 100128",
+    "",
+    ""
+  ],
+  [
+    2026,
+    "Yumei Li, Willy Susilo, Fuchun Guo, Yudi Zhang and Mingwu Zhang",
+    "LRC-DPoR: efficient data integrity auditing with local repair and dynamic updates",
+    "ACISP 2026",
+    "LNCS 16794, pp 393-413",
+    "",
+    ""
+  ],
+  [
+    2026,
+    "Xinyi Zhang, Peng Yu, Yifei Wang and Mingwu Zhang",
+    "A distributed privacy-preserving data aggregation scheme for smart grid with false data detection",
+    "NSS 2025",
+    "LNCS 16326, pp 350-365",
+    "",
+    ""
+  ],
+  [
+    2026,
+    "Jianyu Wang, Mengya Lei, Zhen Fan and Mingwu Zhang",
+    "A verifiable and privacy-preserving credit risk prediction under secure neural network",
+    "CSS 2025",
+    "LNCS 16195, pp 362-376",
+    "",
     ""
   ],
   [
@@ -132,21 +195,30 @@ export const recentPapers = [
 export const preprints = [
   [
     2026,
-    "Hua Shen, Renzhi Chen, Ge Wu, Willy Susilo, Jing Chen, Mingwu Zhang",
-    "Structural Leakage in Graph Encryption: Attacks and Defenses",
-    "arXiv",
-    "2608.13981",
-    "https://arxiv.org/abs/2608.13981",
-    "Preprint; submitted 14 August 2026."
+    "Yanwei Zhou, Yasi Zhu, Zirui Qiao, Wei Deng, Bo Yang, Mingwu Zhang",
+    "Efficient identity authentication services: an inner product-based one-to-many authentication and key agreement protocol for VANETs",
+    "IEEE Transactions on Vehicular Technology",
+    "doi: 10.1109/TVT.2026.3748878",
+    "https://doi.org/10.1109/TVT.2026.3748878",
+    "Accepted; available online first."
   ],
   [
     2026,
-    "Hanchao Ku, Hikaru Tsuchida, Mingwu Zhang, Takashi Nishide",
-    "A Communication-Efficient Local-Verification Framework for Maliciously Secure MPC with a Two-Thirds Honest Majority",
-    "Cryptology ePrint Archive",
-    "2026/1307",
-    "https://eprint.iacr.org/2026/1307",
-    "Author manuscript; ePrint metadata reports ICICS 2026. Conference pagination not yet verified."
+    "Yilin Liu, Yu Chen and Mingwu Zhang",
+    "A privacy-preserving cloud screening service for UAV preflight conflict detection",
+    "MobiQuitous 2026",
+    "",
+    "",
+    "Accepted."
+  ],
+  [
+    2026,
+    "Peng Yu, Yuzhu Wang, Yu Chen, Qing Ye, Mingwu Zhang",
+    "SAML: A secure anti-money laundering scheme with multi-client functional encryption",
+    "CSS 2026",
+    "",
+    "https://nsclab.org/css2026/list.html",
+    "Best Paper Award."
   ],
   [
     2025,

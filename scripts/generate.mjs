@@ -2,10 +2,10 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { navigation, home, research, awards, patents, team, services, papersPage, memberPages } from '../src/content.mjs';
 const pages = {
  '/': { content: home },
- '/research/': { content: research },
- '/awards/': { content: awards },
+ '/research/': { content: research, label: 'Research' },
+ '/awards/': { content: awards, label: 'Awards' },
  '/publication/': { content: papersPage() },
- '/patents/': { content: patents },
+ '/patents/': { content: patents, label: 'Patents' },
  '/teaching/': { content: team },
  '/services/': { content: services },
  ...Object.fromEntries(Object.entries(memberPages()).map(([path, member]) => [path, {
@@ -17,7 +17,7 @@ const pages = {
 };
 for (const [path, page] of Object.entries(pages)) {
  const active = page.section || path;
- const navTitle = navigation.find(n => n[1] === active)[0];
+ const navTitle = page.label || navigation.find(n => n[1] === active)[0];
  const headTitle = page.title
   ? `${page.title} | Members | Institute of Cyberspace Security | Hubei University of Technology`
   : `${navTitle} | Institute of Cyberspace Security | Hubei University of Technology`;
@@ -29,9 +29,9 @@ for (const [path, page] of Object.entries(pages)) {
  const html = `<!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${headTitle}</title><meta name="description" content="${description}"><meta name="theme-color" content="#20466f"><link rel="preload" href="/assets/aldrich.ttf" as="font" type="font/ttf" crossorigin><link rel="icon" type="image/png" href="/assets/hbut-seal.png"><link rel="stylesheet" href="/src/style.css"><script type="module" src="/src/main.js"></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="header-inner"><button class="menu-toggle" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav id="main-nav" aria-label="Main navigation">${nav}</nav></div></header>
+<header class="site-header"><div class="header-inner"><a class="university-brand" href="https://en.hbut.edu.cn/" target="_blank" rel="noopener" aria-label="Hubei University of Technology website"><img src="/assets/hbut-seal.png" alt="HBUT seal" width="48" height="48"><span class="university-name">HUBEI UNIVERSITY<br>OF TECHNOLOGY<span class="university-abbr">HBUT · EST. 1952</span></span></a><button class="menu-toggle" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false"><span></span><span></span><span></span></button><nav id="main-nav" aria-label="Main navigation">${nav}</nav></div></header>
 <main id="main" class="page ${pageClass}">${page.content}</main>
-<footer class="site-footer"><p>Copyright © ${new Date().getFullYear()} | Institute of Cyberspace Security</p><p class="footer-affiliation">Institute of Cyberspace Security · Hubei University of Technology</p><nav aria-label="Footer navigation">${nav}</nav></footer><a class="back-to-top" href="#main" aria-label="Back to top" hidden><span aria-hidden="true">↑</span></a></body></html>`;
+<footer class="site-footer"><p>Copyright © ${new Date().getFullYear()} | Institute of Cyberspace Security · Hubei University of Technology</p></footer><a class="back-to-top" href="#main" aria-label="Back to top" hidden><span aria-hidden="true">↑</span></a></body></html>`;
  // Rewrite absolute URLs so the generated pages also work from a subpath.
  const depth = path.split('/').filter(Boolean).length;
  const prefix = depth ? '../'.repeat(depth) : './';
