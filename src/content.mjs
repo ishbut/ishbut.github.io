@@ -53,40 +53,32 @@ export const papers = [...recentPapers, ...earlierPapers].sort((a,b)=>b[0]-a[0])
 const ul = items => `<ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`;
 const sourceNote = `<p class="source-note">Source: the April 2025 HBUT faculty profile for Professor Mingwu Zhang. Figures describe that individual record, not a group-wide total.</p>`;
 const recentNote = `<p class="source-note">Recent records checked on 29 October 2026 against publisher metadata, conference records, university reports, and author archives. Issue years and online publication dates may differ; preprints and accepted papers are labeled separately.</p>`;
-const awardDescription = `<strong>CSS 2026 Best Paper Award.</strong> HBUT reports that the SAML research paper received a Best Paper Award. Doctoral student Peng Yu is the first author and Mingwu Zhang is the corresponding author. The work investigates privacy-preserving anti-money-laundering analysis using multi-client functional encryption. <a href="${recentSources.award}" target="_blank" rel="noopener">HBUT report, 20 August 2026 ↗</a>`;
-const recentHighlights = `<section class="recent-highlights" aria-labelledby="recent-title"><h2 id="recent-title">Recent Group Highlights</h2><ul><li><span class="highlight-date">August 2026</span><div>${awardDescription}</div></li><li><span class="highlight-date">2026 · Online first</span><div><a href="https://doi.org/10.1109/TVT.2026.3748878" target="_blank" rel="noopener">Efficient identity authentication services: an inner product-based one-to-many authentication and key agreement protocol for VANETs</a> is accepted for publication in IEEE Transactions on Vehicular Technology and available online first, with Yanwei Zhou as first author.</div></li><li><span class="highlight-date">2026 · IEEE TIFS</span><div><a href="https://doi.org/10.1109/tifs.2026.3666853" target="_blank" rel="noopener">PPOM-Attack</a> studies black-box adversarial attacks against face recognition. Mingwu Zhang is a co-author; Ke Cheng is first author and Jixin Zhang is corresponding author. <a href="${recentSources.ppom}" target="_blank" rel="noopener">HBUT report ↗</a></div></li><li><span class="highlight-date">2026 · IEEE TDSC</span><div><a href="https://doi.org/10.1109/tdsc.2026.3657345" target="_blank" rel="noopener">CLR-IA: an efficient identity authentication protocol with continuous leakage resilience for mobile edge computing</a>, with Yanwei Zhou as first author and Mingwu Zhang among the authors.</div></li><li><span class="highlight-date">2026 · Information Sciences</span><div><a href="https://doi.org/10.1016/j.ins.2026.123619" target="_blank" rel="noopener">Privacy-preserving federated learning via secret sharing and multi-key homomorphic encryption</a>, with Yuntao Wang as first author and Mingwu Zhang as a co-author.</div></li></ul><p><a href="/publication/">See recent publications →</a></p></section>`;
+const awardDescription = `<strong>CSS 2026 Best Paper Award.</strong> HBUT reports that the SAML research paper received a Best Paper Award. Doctoral student Peng Yu is the first author and Mingwu Zhang is the corresponding author. The work investigates privacy-preserving anti-money-laundering analysis using multi-client functional encryption. <a href="${recentSources.award}" target="_blank" rel="noopener">HBUT report, 20 August 2026 <i class="inline-icon" data-lucide="arrow-up-right" aria-hidden="true"></i></a>`;
+const recentHighlights = `<section class="recent-highlights" aria-labelledby="recent-title"><h2 id="recent-title">Recent Group Highlights</h2><ul><li><div class="highlight-title">SAML: A secure anti-money laundering scheme with multi-client functional encryption</div><div class="highlight-authors">P. Yu, Y. Wang, Y. Chen, Q. Ye, M. Zhang</div><div class="highlight-venue"><em>CSS 2026</em> · Best Paper Award</div></li><li><div class="highlight-title">Efficient identity authentication services: an inner product-based one-to-many authentication and key agreement protocol for VANETs</div><div class="highlight-authors">Y. Zhou, Y. Zhu, Z. Qiao, W. Deng, B. Yang, M. Zhang</div><div class="highlight-venue"><em>IEEE Transactions on Vehicular Technology</em> · Online first</div></li><li><div class="highlight-title">PPOM-Attack: A substitute model-free perturbation prediction and optimization method for black-box adversarial attack against face recognition</div><div class="highlight-authors">K. Cheng, J. Zhang, H. Li, Z. Zhong, M. Zhang, Z. Qin</div><div class="highlight-venue"><em>IEEE Transactions on Information Forensics and Security</em>, 2026</div></li><li><div class="highlight-title">CLR-IA: An efficient identity authentication protocol with continuous leakage resilience for mobile edge computing</div><div class="highlight-authors">Y. Zhou, Y. Zhu, Z. Qiao, X. Liu, G. Zhang, B. Yang, T. Zhu, M. Zhang</div><div class="highlight-venue"><em>IEEE Transactions on Dependable and Secure Computing</em>, 2026</div></li><li><div class="highlight-title">Privacy-preserving federated learning via secret sharing and multi-key homomorphic encryption</div><div class="highlight-authors">Y. Wang, F. Inoue, Y. Gu, X. Shen, M. Zhang</div><div class="highlight-venue"><em>Information Sciences</em>, 2026</div></li></ul><p><a href="/publication/">See recent publications <i class="inline-icon" data-lucide="arrow-right" aria-hidden="true"></i></a></p></section>`;
 const profile = `<div class="home-layout">
 <aside class="profile-sidebar" aria-label="Contact information">
 <img class="portrait" src="/assets/mingwu-zhang.png" alt="Professor Mingwu Zhang" width="150" height="222">
 <ul class="contact-list">
-<li><span class="contact-icon" aria-hidden="true">⌖</span><span>Institute of Cyberspace Security<br>B608, Training Building<br>Hubei University of Technology</span></li>
-<li><span class="contact-icon" aria-hidden="true">⌖</span><span>28 Nanli Road, Hongshan<br>Wuhan, Hubei 430068<br>P. R. China</span></li>
-<li><span class="contact-icon" aria-hidden="true">✉</span><a href="mailto:hbutzhang@gmail.com">hbutzhang@gmail.com</a></li>
+<li><i class="contact-icon" data-lucide="map-pin" aria-hidden="true"></i><span>B608, Training Building<br>Institute of Cyberspace Security<br>Hubei University of Technology<br>28 Nanli Road, Hongshan<br>Wuhan, Hubei 430068<br>P. R. China</span></li>
+<li><i class="contact-icon" data-lucide="mail" aria-hidden="true"></i><a href="mailto:hbutzhang@gmail.com">hbutzhang@gmail.com</a></li>
 </ul>
-<div class="profile-links"><a href="${links.scholar}" target="_blank" rel="noopener">Google Scholar ↗</a><a href="${links.dblp}" target="_blank" rel="noopener">DBLP ↗</a><a href="${links.cv}" target="_blank" rel="noopener">University CV (PDF, historical) ↗</a></div>
+<div class="profile-links"><a href="${links.scholar}" target="_blank" rel="noopener">Google Scholar <i class="inline-icon" data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="${links.dblp}" target="_blank" rel="noopener">DBLP <i class="inline-icon" data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="${links.cv}" target="_blank" rel="noopener">University CV (PDF, historical) <i class="inline-icon" data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
 </aside>
 <article class="biography"><h1>Mingwu Zhang</h1>
-<div class="academic-titles">Professor of Computer Science<br>Ph.D. and Master's Supervisor<br>Director, Institute of Cyberspace Security<br>Institute of Cyberspace Security<br>Hubei University of Technology, Wuhan, China</div>
-<div class="bio-body"><p><strong>Dr. Mingwu Zhang</strong> is a Professor at the Institute of Cyberspace Security, Hubei University of Technology (HBUT). He directs the university's Institute of Cyberspace Security. His research focuses on <strong>public-key and applied cryptography, big-data security and privacy, blockchain and industrial Internet security, and artificial intelligence security.</strong></p>
-${recentHighlights}
-<p>Dr. Zhang is a Hubei Province distinguished talent and was selected as a <strong>Chutian Scholar Distinguished Professor</strong> in 2013. He has been included in the career-long list of the world's top 2% scientists. From 2010 to 2012, he was a postdoctoral researcher and JSPS Fellow at Kyushu University, Japan. He was a visiting scholar at the University of Wollongong, Australia, from 2015 to 2016.</p>
-<p>His research connects the foundations of cryptography with privacy-sensitive applications. Topics include functional encryption, witness encryption, leakage-resilient cryptography, provably secure program obfuscation, privacy-preserving machine learning, and secure data sharing. He has led more than 30 research projects, including projects supported by the <strong>National Natural Science Foundation of China</strong>, provincial research programs, JSPS, and industry.</p>
-<p>He has published more than 100 research papers in journals and conferences including <em>Designs, Codes and Cryptography</em>, <em>IEEE Transactions on Information Forensics and Security</em>, <em>IEEE Transactions on Dependable and Secure Computing</em>, <em>IEEE Transactions on Services Computing</em>, and ASIACRYPT. He has authored three research monographs and served as an author or editor of six textbooks.</p>
-<p>The April 2025 HBUT profile reports eight best paper awards for Dr. Zhang's work, including recognition at ACISP 2018, Inscrypt 2018, EIDWT 2017, and FCS 2024. His academic service includes editorial roles for more than ten journals and conference leadership at ProvSec 2023, EIDWT 2017, AsiaJCIS 2014, and JWIS 2010.</p>
-<p>He also serves as Director of the Hubei Engineering Technology Research Center for SME Big Data and Deputy Director of the Hubei Blockchain Technology Innovation Research Institute.</p>
-<p>For research projects and representative publications, visit <a href="/research/">Research</a> and <a href="/publication/">Publications</a>. Information about graduate supervision is available on the <a href="/teaching/">Members</a> page.</p>${sourceNote}</div></article></div>`;
+<div class="academic-titles">Professor, Ph.D.<br>Hubei University of Technology<br>Institute of Cyberspace Security</div>
+<div class="bio-body"><p><strong>Dr. Mingwu Zhang</strong> is a professor with the School of Computer Science and Artificial Intelligence in Hubei University of Technology, and the director of Institute of Cyber Security in HBUT. From 2010 to 2012, he has been a JSPS Fellow of Japan Society of Promotion Sciences (JSPS) at Institute of Mathematics for Industry in Kyushu University, Japan. From 2015 to 2016, he has been a Senior Visiting Professor with the School of Computing and Information Technology, University of Wollongong, Australia. His research interests include networks and data security, secure computation and privacy preservation in big-data, AI, clouds and crowdsensing, etc.</p>
+${recentHighlights}</div></article></div>`;
 export const home = `<div class="portal">
-<section class="keyword-banner" aria-label="Research keywords"><div class="keyword-cloud"><span class="kw-xl">CRYPTOGRAPHY</span><span class="kw-sm">FUNCTIONAL ENCRYPTION</span><span class="kw-md">LEAKAGE RESILIENCE</span><span class="kw-xl">PRIVACY</span><span class="kw-sm">FEDERATED LEARNING</span><span class="kw-lg">AI SECURITY</span><span class="kw-md">SECURE COMPUTATION</span><span class="kw-sm">AUTHENTICATION</span><span class="kw-xl">DATA SECURITY</span><span class="kw-md">CLOUD COMPUTING</span><span class="kw-sm">BIG-DATA PRIVACY</span><span class="kw-lg">BLOCKCHAIN</span><span class="kw-sm">OUTSOURCED COMPUTATION</span><span class="kw-md">IOT SECURITY</span><span class="kw-sm">VEHICULAR NETWORKS</span><span class="kw-lg">SECURE DATA SHARING</span><span class="kw-sm">INDUSTRIAL INTERNET</span><span class="kw-md">PRIVACY-PRESERVING ML</span></div></section>
-<p class="portal-tagline"><strong>Institute of Cyberspace Security</strong>, Hubei University of Technology — research in cryptography, data security and AI security</p>
-<section class="portal-section">${recentHighlights}</section>
+<section class="keyword-banner" aria-label="Research keywords"><div class="keyword-cloud"><span class="kw-xl">CRYPTOGRAPHY</span><span class="kw-sm">FUNCTIONAL ENCRYPTION</span><span class="kw-md">LEAKAGE RESILIENCE</span><span class="kw-xl">PRIVACY</span><span class="kw-sm">FEDERATED LEARNING</span><span class="kw-lg">ARTIFICIAL INTELLIGENCE SECURITY</span><span class="kw-md">SECURE COMPUTATION</span><span class="kw-sm">AUTHENTICATION</span><span class="kw-xl">DATA SECURITY</span><span class="kw-md">CLOUD COMPUTING</span><span class="kw-sm">BIG-DATA PRIVACY</span><span class="kw-lg">BLOCKCHAIN</span><span class="kw-sm">OUTSOURCED COMPUTATION</span><span class="kw-md">INTERNET OF THINGS SECURITY</span><span class="kw-sm">VEHICULAR NETWORKS</span><span class="kw-lg">SECURE DATA SHARING</span><span class="kw-sm">INDUSTRIAL INTERNET</span><span class="kw-md">PRIVACY-PRESERVING MACHINE LEARNING</span><span class="kw-md">VULNERABILITIES</span></div></section>
+<p class="portal-tagline"><strong>Institute of Cyberspace Security</strong>, Hubei University of Technology — research in cryptography, data security and artificial intelligence security</p>
+<section class="portal-section">${recentHighlights.replace('Recent Group Highlights', 'Highlights')}</section>
 </div>`;
 // Group member records. Add a member here to create /teaching/<slug>/ automatically.
 // Fields: slug, name, nameEn, role, focus, photo, bio, contact, source, placeholder, detail.
-const rosterNote = label => `<p class="source-note">Based on the ${label} and the HBUT faculty roster (accessed 9 November 2026). Chinese titles and research areas are editorial translations.</p>`;
 export const members = [
  {
   slug: 'mingwu-zhang', name: 'Mingwu Zhang', role: 'Professor • Ph.D.', leader: true,
-  summary: "Professor of Computer Science and Director of the Institute of Cyberspace Security, leading the group's research on public-key and applied cryptography, big-data security and privacy, blockchain and industrial Internet security, and AI security.",
+  summary: "Dr. Mingwu Zhang is a professor with the School of Computer Science and Artificial Intelligence in Hubei University of Technology, and the director of Institute of Cyber Security in HBUT. From 2010 to 2012, he has been a JSPS Fellow of Japan Society of Promotion Sciences (JSPS) at Institute of Mathematics for Industry in Kyushu University, Japan. From 2015 to 2016, he has been a Senior Visiting Professor with the School of Computing and Information Technology, University of Wollongong, Australia. His research interests include networks and data security, secure computation and privacy preservation in big-data, AI, clouds and crowdsensing, etc.",
   focus: 'Public-key cryptography, big-data security and privacy, AI security',
   photo: '/assets/mingwu-zhang.png', detail: profile
  },
@@ -98,7 +90,6 @@ export const members = [
 <h2>Research and Supervision</h2><p>AI security, information security, privacy-preserving computation and privacy protection. The profile lists supervision in information security, privacy computing and privacy protection for Computer Science and Technology / Electronic Information.</p>
 <h2>Teaching</h2><p>Provable Security; Data Structures; Operating System Principles and Security; Cryptography Principles and Applications; Industrial Big Data Security and Privacy Protection.</p>
 <h2>Selected Projects</h2><ul><li>NSFC Young Scientists Fund: privacy-preserving data aggregation for massive-data analysis.</li><li>Hubei Provincial Department of Education key project: privacy-protection mechanisms for smart grids.</li><li>HBUT Green Industry Technology Leading Program: privacy protection for industrial big data published by small and medium-sized enterprises.</li></ul>`,
-  source: rosterNote('HBUT faculty profile for Hua Shen')
  },
  {
   slug: 'yuanyuan-zhang', name: 'Yuanyuan Zhang', role: 'Associate Professor • Ph.D.',
@@ -108,7 +99,6 @@ export const members = [
 <h2>Research</h2><p>Public-key cryptography; big-data security and privacy protection; digital economy and AI security; blockchain and industrial Internet security.</p>
 <h2>Teaching</h2><p>Mathematical Foundations of Information Security; Discrete Mathematics.</p>
 <h2>Selected Projects and Recognition</h2><ul><li>Principal investigator, NSFC Young Scientists Fund project on leakage-resilient authenticated key exchange.</li><li>Second Prize, Science and Technology Award of the China Institute of Communications; co-chair of ProvSec 2023.</li><li>Member of the Hubei Cyberspace Security Society.</li></ul>`,
-  source: rosterNote('HBUT faculty profile for Yuanyuan Zhang')
  },
  {
   slug: 'gang-shen', name: 'Gang Shen', role: 'Lecturer • Ph.D.',
@@ -117,7 +107,6 @@ export const members = [
   bio: `<p><strong>Gang Shen</strong> is a Lecturer and Master's Supervisor at HBUT. The faculty profile records a doctoral degree and reports more than 20 SCI/EI-indexed papers and over 10 granted invention patents.</p>
 <h2>Research and Supervision</h2><p>Cryptography, and data security and privacy protection for vehicular networks, healthcare networks and artificial intelligence.</p>
 <h2>Selected Projects</h2><ul><li>Hubei Provincial Natural Science Foundation general project (2023AFB951): key techniques for leakage-resilient homomorphic secret sharing, 2023–2025.</li><li>Hubei Provincial Department of Education project: security of trustworthy federated learning in smart healthcare, 2024–2026.</li></ul>`,
-  source: rosterNote('HBUT faculty profile for Gang Shen')
  },
  { slug: 'yuzhu-wang', name: 'Yuzhu Wang', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', placeholder: true },
  { slug: 'yu-chen', name: 'Yu Chen', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', placeholder: true }
@@ -148,10 +137,10 @@ export const memberCards = `${leaderCard(members[0])}<div class="member-grid">${
 function memberPage(m) {
  const breadcrumb = `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/teaching/">Members</a><span aria-hidden="true">/</span><span aria-current="page">${m.name}</span></nav>`;
  if (m.detail) {
-  const detail = m.detail.replace('Recent Group Highlights', 'Recent Highlights');
-  return `${breadcrumb}<p class="profile-note">Individual faculty profile — personal record, not a group-wide summary.</p>${detail}${m.slug === 'mingwu-zhang' ? `<section class="member-extra inner-page">${zhangSupervision}</section>` : ''}`;
+  const detail = m.detail.replace('Recent Group Highlights', 'Highlights');
+  return `${breadcrumb}${detail}`;
  }
- const contact = m.contact ? `<ul class="contact-list"><li><span class="contact-icon" aria-hidden="true">✉</span><a href="mailto:${m.contact}">${m.contact}</a></li></ul>` : '';
+ const contact = m.contact ? `<ul class="contact-list"><li><i class="contact-icon" data-lucide="mail" aria-hidden="true"></i><a href="mailto:${m.contact}">${m.contact}</a></li></ul>` : '';
  const body = m.placeholder
   ? `<p>This entry is an English-romanised name placeholder from the HBUT faculty roster. No verified individual profile has been published there yet, so no title, research area or biography is assumed. Details will be added when available.</p>`
   : `${m.bio || ''}${m.source || ''}`;
@@ -180,30 +169,34 @@ const zhangSupervision = `<h2>Graduate Supervision</h2><p>Dr. Zhang supervises d
 <h2>Prospective Students</h2><p>Motivated students with a serious interest in cryptography and security are welcome to enquire about supervision. Please contact <a href="mailto:hbutzhang@gmail.com">hbutzhang@gmail.com</a> for current opportunities and research topics. The current student roster is shown on the <a href="/teaching/">Members</a> page.</p><p>For university application information, visit the <a href="https://yjs.hbut.edu.cn/" target="_blank" rel="noopener">HBUT Graduate School</a> or the <a href="https://sie.hbut.edu.cn/" target="_blank" rel="noopener">School of International Education</a>.</p>${sourceNote}`;
 // Current student roster provided by the group. Names are English romanisations.
 export const currentStudents = [
- { name: 'Guanghao Gao', degree: "Master's" },
- { name: 'Jing Gao', degree: "Master's" },
- { name: 'Cunzhi Li', degree: "Master's" },
- { name: 'Jilei Li', degree: "Master's" },
- { name: 'Yilin Liu', degree: "Master's" },
- { name: 'Wencan Lu', degree: "Master's" },
- { name: 'Dan Luo', degree: "Master's" },
- { name: 'Yunxiao Mu', degree: "Master's" },
- { name: 'Haogang Qin', degree: "Master's" },
- { name: 'Bensheng Wan', degree: "Master's" },
- { name: 'Kewen Wang', degree: "Master's", link: 'https://github.com/Wcowin' },
- { name: 'Nanyang Wang', degree: "Master's" },
- { name: 'Zixiao Xu', degree: "Master's" },
- { name: 'Xinyi Zhang', degree: "Master's" },
- { name: 'Yanrui Zhao', degree: "Master's" },
- { name: 'Xiang Zou', degree: "Master's" },
- { name: 'Peng Yu', degree: 'Ph.D.' }
+ { name: 'Guanghao Gao', degree: "Master's", since: '2025' },
+ { name: 'Jing Gao', degree: "Master's", since: '2024' },
+ { name: 'Cunzhi Li', degree: "Master's", since: '2025' },
+ { name: 'Jilei Li', degree: "Master's", since: '2024' },
+ { name: 'Yilin Liu', degree: "Master's", since: '2024' },
+ { name: 'Wencan Lu', degree: "Master's", since: '2026' },
+ { name: 'Dan Luo', degree: "Master's", since: '2026' },
+ { name: 'Yunxiao Mu', degree: "Master's", since: '2026' },
+ { name: 'Haogang Qin', degree: "Master's", since: '2025' },
+ { name: 'Bensheng Wan', degree: "Master's", since: '2024' },
+ { name: 'Kewen Wang', degree: "Master's", since: '2026', link: 'https://github.com/Wcowin', avatar: '/assets/kewen-wang.jpg' },
+ { name: 'Nanyang Wang', degree: "Master's", since: '2025' },
+ { name: 'Zixiao Xu', degree: "Master's", since: '2024' },
+ { name: 'Xinyi Zhang', degree: "Master's", since: '2025' },
+ { name: 'Yanrui Zhao', degree: "Master's", since: '2025' },
+ { name: 'Xiang Zou', degree: "Master's", since: '2025' },
+ { name: 'Peng Yu', degree: 'Ph.D.', since: '2025' }
 ];
 function currentStudentsBlock() {
  const doctoral = currentStudents.filter(s => s.degree === 'Ph.D.');
  const graduate = currentStudents.filter(s => s.degree !== 'Ph.D.');
  const card = s => {
   const phd = s.degree === 'Ph.D.';
-  return `<div class="student-card${phd ? ' student-card-phd' : ''}"><h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name} <span class="student-degree">(${phd ? 'Ph.D.' : 'Master'} student)</span></h3></div>`;
+  const initials = s.name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
+  const photo = s.avatar
+   ? `<img class="student-photo" src="${s.avatar}" alt="${s.name}" width="80" height="80">`
+   : `<span class="student-photo student-photo-placeholder" aria-hidden="true">${initials}</span>`;
+  return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">(${phd ? 'Ph.D.' : 'Master'} student)</div><div class="student-since">${s.since || '2026'} –</div></div>`;
  };
  return `<div class="student-grid">${[...doctoral, ...graduate].map(card).join('')}</div>`;
 }
@@ -214,15 +207,22 @@ export const services = `<h1>ACCESS</h1><p>The group is based in Room B608 of th
 <div class="access-info"><div><h2>Address</h2><p>B608, Training Building<br>Hubei University of Technology<br>28 Nanli Road, Hongshan District<br>Wuhan, Hubei 430068<br>P. R. China</p></div><div><h2>Contact</h2><p>For visits and general enquiries: <a href="mailto:hbutzhang@gmail.com">hbutzhang@gmail.com</a> (Professor Mingwu Zhang).</p></div></div>
 <div class="map-row"><div class="map-panel"><h2>Google Maps</h2><iframe class="map-embed" title="Google Maps showing Hubei University of Technology" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.3882504478233!2d114.31096!3d30.481761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x342eb067a18a38ad%3A0x6b554888861f123d!2z5rmW5YyX5bel5Lia5aSn5a2m!5e0!3m2!1szh-CN!2s!4v1794557512047!5m2!1szh-CN!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="map-panel"><h2>Baidu Maps</h2><iframe class="map-embed" title="Baidu Maps showing Hubei University of Technology" src="https://api.map.baidu.com/marker?location=30.481761,114.31096&amp;title=Hubei%20University%20of%20Technology&amp;content=Hubei%20University%20of%20Technology&amp;output=html&amp;coord_type=wgs84&amp;zoom=16&amp;src=webapp.ishbut.access" loading="lazy" referrerpolicy="no-referrer"></iframe></div></div>
 <p class="source-note">The maps show the Hubei University of Technology campus; our office is B608 in the Training Building. Please arrange visits in advance by email.</p>`;
-function renderPaper([year, authors, title, venue, ref, url, note]) {
- const authorText = authors.replace(/Mingwu Zhang|M\. Zhang|Hua Shen|H\. Shen|Gang Shen|G\. Shen|Yuanyuan Zhang|Yuzhu Wang|Yu Chen|Peng Yu/g, '<strong>$&</strong>');
- const target = url || `https://scholar.google.com/scholar?q=${encodeURIComponent(title)}`;
- return `<li class="paper"><span>${authorText}.</span> <a class="paper-title" href="${target}" target="_blank" rel="noopener">${title}.</a> <em>${venue}</em>${ref ? `, ${ref}` : ''} (${year}).${note ? `<span class="record-note">${note}</span>` : ''}</li>`;
+function abbreviateName(name) {
+ const parts = name.trim().split(/\s+/);
+ return parts.map((p, i) => i === parts.length - 1 ? p : `${p[0].toUpperCase()}.`).join(' ');
 }
-function renderYears(records, label = '') {
- return [...new Set(records.map(p=>p[0]))].map(year=>`<section class="publication-year" data-year="${year}"><h2>${label}${year}</h2><ul>${records.filter(p=>p[0]===year).map(renderPaper).join('')}</ul></section>`).join('');
+function abbreviateAuthors(text) {
+ return text.split(/,\s*/).map(part => part.split(/(\s+and\s+)/).map(bit => /^\s+and\s+$/.test(bit) ? bit : abbreviateName(bit)).join('')).join(', ');
+}
+function renderPaper([year, authors, title, venue, ref, url, note]) {
+ return `<li class="paper"><div class="paper-title-row"><span class="paper-title">${title}</span></div><div class="paper-authors">${abbreviateAuthors(authors)}</div><div class="paper-venue"><em>${venue}</em>${ref ? `, ${ref}` : ''} (${year})${note ? ` · <span class="record-note">${note}</span>` : ''}</div></li>`;
+}
+function renderYears(records, label = '', yearTitle = null) {
+ return [...new Set(records.map(p=>p[0]))].map(year=>`<section class="publication-year" data-year="${year}"><h2>${label}${yearTitle || year}</h2><ul>${records.filter(p=>p[0]===year).map(renderPaper).join('')}</ul></section>`).join('');
 }
 export function papersPage() {
+ const papers2026 = papers.filter(p => p[0] === 2026);
+ const preprints2026 = preprints.filter(p => p[0] === 2026);
  return `<h1>PUBLICATIONS</h1>
- <div id="publications"><div id="published-work"><h2 class="publication-category">Journal and Conference Work</h2>${renderYears(papers)}</div><div id="author-manuscripts"><h2 class="publication-category">Online, Accepted and Preprints</h2>${renderYears(preprints)}</div></div>`;
+ <div id="publications">${renderYears(preprints2026, '', '2027')}${renderYears(papers2026)}</div>`;
 }

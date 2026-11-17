@@ -1,3 +1,7 @@
+import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, MapPin, Mail } from 'lucide';
+
+createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, MapPin, Mail } });
+
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');
 toggle?.addEventListener('click', () => {

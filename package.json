@@ -8,5 +8,10 @@
     "build": "node scripts/generate.mjs && vite build",
     "preview": "vite preview --host 0.0.0.0"
   },
-  "devDependencies": { "vite": "^7.1.0" }
+  "devDependencies": {
+    "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "lucide": "^1.74.0"
+  }
 }
