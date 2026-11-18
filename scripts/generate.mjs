@@ -1,10 +1,16 @@
 import { mkdir, writeFile } from 'node:fs/promises';
-import { navigation, home, research, awards, patents, team, services, papersPage, memberPages } from '../src/content.mjs';
+import { navigation, home, research, awards, patents, team, services, papersPage, conferencePage, conferencePages, memberPages } from '../src/content.mjs';
 const pages = {
  '/': { content: home },
  '/research/': { content: research, label: 'Research' },
  '/awards/': { content: awards, label: 'Awards' },
  '/publication/': { content: papersPage() },
+ '/conference/': { content: conferencePage() },
+ ...Object.fromEntries(Object.entries(conferencePages()).map(([path, conf]) => [path, {
+  content: conf.content,
+  label: conf.label,
+  section: conf.section
+ }])),
  '/patents/': { content: patents, label: 'Patents' },
  '/teaching/': { content: team },
  '/services/': { content: services },

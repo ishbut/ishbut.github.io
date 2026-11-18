@@ -1,6 +1,6 @@
-import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, MapPin, Mail } from 'lucide';
+import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail } from 'lucide';
 
-createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, MapPin, Mail } });
+createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail } });
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');
@@ -15,6 +15,21 @@ document.addEventListener('keydown', event => {
     toggle.click(); toggle.focus();
   }
 });
+const confHero = document.querySelector('.conf-hero');
+if (confHero) {
+  const slides = [...confHero.querySelectorAll('.conf-slide')];
+  const dots = [...confHero.querySelectorAll('.conf-dot')];
+  let current = 0;
+  const show = index => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
+  };
+  confHero.querySelector('.conf-prev')?.addEventListener('click', () => show(current - 1));
+  confHero.querySelector('.conf-next')?.addEventListener('click', () => show(current + 1));
+  dots.forEach(dot => dot.addEventListener('click', () => show(Number(dot.dataset.slide))));
+  setInterval(() => show(current + 1), 5000);
+}
 const topLink = document.querySelector('.back-to-top');
 if (topLink) {
   let anchorY = window.scrollY;

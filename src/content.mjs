@@ -4,7 +4,7 @@ export const links = {
   dblp: 'https://dblp.org/pid/28/2422.html',
   cv: '/assets/teachers/mingwu-zhang-cv.pdf',
 };
-export const navigation = [['Home','/'],['Members','/teaching/'],['Publications','/publication/'],['Access','/services/']];
+export const navigation = [['Home','/'],['Members','/teaching/'],['Publications','/publication/'],['Conferences','/conference/'],['Access','/services/']];
 export const projects = [
  ['2025–2028','Public-key cryptography with dynamic automata policies for time-series data','National Natural Science Foundation of China (NSFC), General Program','62472150','Principal Investigator'],
  ['2025–2026','Security and privacy protection in machine learning','Industry-sponsored research','','Principal Investigator'],
@@ -180,7 +180,7 @@ export const currentStudents = [
  { name: 'Haogang Qin', degree: "Master's", since: '2025' },
  { name: 'Bensheng Wan', degree: "Master's", since: '2024' },
  { name: 'Kewen Wang', degree: "Master's", since: '2026', link: 'https://github.com/Wcowin', avatar: '/assets/students/kewen-wang.jpg' },
- { name: 'Nanyang Wang', degree: "Master's", since: '2025' },
+ { name: 'Nanyang Wang', degree: "Master's", since: '2025', avatar: '/assets/students/nanyang-wang.jpg' },
  { name: 'Zixiao Xu', degree: "Master's", since: '2024' },
  { name: 'Xinyi Zhang', degree: "Master's", since: '2025' },
  { name: 'Yanrui Zhao', degree: "Master's", since: '2025' },
@@ -208,7 +208,7 @@ ${memberCards}
 <h2>Current Students</h2>${currentStudentsBlock()}`;
 export const services = `<h1>ACCESS</h1><p>The group is based in Room B608 of the Training Building at Hubei University of Technology, Wuhan. Please arrange visits in advance by email.</p>
 <div class="access-info"><div><h2>Address</h2><p>B608, Training Building<br>Hubei University of Technology<br>28 Nanli Road, Hongshan District<br>Wuhan, Hubei 430068<br>P. R. China</p></div><div><h2>Contact</h2><p>For visits and general enquiries: <a href="mailto:hbutzhang@gmail.com">hbutzhang@gmail.com</a>.</p></div></div>
-<div class="map-row"><div class="map-panel"><h2>Google Maps</h2><iframe class="map-embed" title="Google Maps showing Hubei University of Technology" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.3882504478233!2d114.31096!3d30.481761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x342eb067a18a38ad%3A0x6b554888861f123d!2z5rmW5YyX5bel5Lia5aSn5a2m!5e0!3m2!1szh-CN!2s!4v1794557512047!5m2!1szh-CN!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="map-panel"><h2>Baidu Maps</h2><iframe class="map-embed" title="Baidu Maps showing Hubei University of Technology" src="https://api.map.baidu.com/marker?location=30.481761,114.31096&amp;title=Hubei%20University%20of%20Technology&amp;content=Hubei%20University%20of%20Technology&amp;output=html&amp;coord_type=wgs84&amp;zoom=16&amp;src=webapp.ishbut.access" loading="lazy" referrerpolicy="no-referrer"></iframe></div></div>
+<div class="map-row"><div class="map-panel"><h2>Google Maps</h2><iframe class="map-embed" title="Google Maps showing Hubei University of Technology" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.3882504478233!2d114.31096!3d30.481761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x342eb067a18a38ad%3A0x6b554888861f123d!2z5rmW5YyX5bel5Lia5aSn5a2m!5e0!3m2!1szh-CN!2s!4v1794557512047!5m2!1szh-CN!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="map-panel"><h2>Amap</h2><iframe class="map-embed" title="Amap showing Hubei University of Technology" src="https://www.amap.com/ssr/embed/place?id=B001B16FKI&amp;name=%E6%B9%96%E5%8C%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6&amp;lng=114.308911&amp;lat=30.478627&amp;address=%E5%8D%97%E6%9D%8E%E8%B7%AF28%E5%8F%B7%28%E6%B9%96%E5%B7%A5%E5%A4%A7%E5%9C%B0%E9%93%81%E7%AB%99B%E5%8F%A3%E6%AD%A5%E8%A1%8C300%E7%B1%B3%29&amp;zoom=16&amp;source=poi_detail&amp;platform=pc" width="600" height="450" style="border:0" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
 <p class="source-note">The maps show the Hubei University of Technology campus; our office is B608 in the Training Building. Please arrange visits in advance by email.</p>`;
 function abbreviateName(name) {
  const parts = name.trim().split(/\s+/);
@@ -223,6 +223,51 @@ function renderPaper([year, authors, title, venue, ref, url, note]) {
 function renderYears(records, label = '', yearTitle = null) {
  return [...new Set(records.map(p=>p[0]))].map(year=>`<section class="publication-year" data-year="${year}"><h2>${label}${yearTitle || year}</h2><ul>${records.filter(p=>p[0]===year).map(renderPaper).join('')}</ul></section>`).join('');
 }
+const HOSTED_CONFERENCE = {
+ name: 'CSS 2026',
+ slug: 'css-2026',
+ full: 'International Conference on Computer and Communications Security',
+ organizer: 'Institute of Cyberspace Security, Hubei University of Technology',
+ location: 'Wuhan, China',
+ year: '2026'
+};
+export function conferencePage() {
+ const c = HOSTED_CONFERENCE;
+ const cards = `<a class="conference-card" href="/conference/${c.slug}/"><div class="conference-card-head"><h3>${c.name}</h3><span class="conference-count">Hosted conference</span></div><ul class="conference-meta"><li><b>Full name</b><span>${c.full}</span></li><li><b>Organizer</b><span>${c.organizer}</span></li><li><b>Location</b><span>${c.location}</span></li><li><b>Year</b><span>${c.year}</span></li></ul></a><div class="conference-card is-static"><div class="conference-card-head"><h3>ICICS 2026</h3><span class="conference-count">Hosted conference</span></div><ul class="conference-meta"><li><b>Full name</b><span>International Conference on Information and Communications Security</span></li><li><b>Organizer</b><span>Institute of Cyberspace Security, Hubei University of Technology</span></li><li><b>Location</b><span>Wuhan, China</span></li><li><b>Year</b><span>2026</span></li></ul></div>`;
+ return `<section class="conference-hero"><h1>Conferences</h1><p>Conferences hosted by the Institute of Cyberspace Security</p></section><div class="conference-grid">${cards}</div>`;
+}
+function conferenceDetail() {
+ const c = HOSTED_CONFERENCE;
+ const slides = [
+  { kicker: 'Hubei University of Technology', title: c.name, sub: c.full, meta: `Hosted by the ${c.organizer}` },
+  { kicker: 'Call for Papers', title: 'Security &amp; Privacy', sub: 'Cryptography, data security, AI security, and blockchain', meta: `${c.location} · ${c.year}` },
+  { kicker: 'Organized by', title: 'Institute of Cyberspace Security', sub: 'Hubei University of Technology', meta: 'Visit · Contact · Collaborate' }
+ ].map((s, i) => `<div class="conf-slide${i === 0 ? ' is-active' : ''}"><span class="conf-slide-kicker">${s.kicker}</span><h1>${s.title}</h1><p>${s.sub}</p><p class="conf-slide-meta">${s.meta}</p></div>`).join('');
+ const dots = [0, 1, 2].map(i => `<button class="conf-dot${i === 0 ? ' is-active' : ''}" data-slide="${i}" aria-label="Show slide ${i + 1}"></button>`).join('');
+ const committee = [
+  ['General Chair', 'To be announced.'],
+  ['Program Chair', 'To be announced.'],
+  ['Organizing Chair', 'Institute of Cyberspace Security, Hubei University of Technology.'],
+  ['Publicity Chair', 'To be announced.']
+ ].map(([t, d]) => `<article class="conf-topic"><h3>${t}</h3><p>${d}</p></article>`).join('');
+ return `<section class="conf-hero"><div class="conf-slides">${slides}</div><button class="conf-arrow conf-prev" aria-label="Previous slide"><i data-lucide="chevron-left" aria-hidden="true"></i></button><button class="conf-arrow conf-next" aria-label="Next slide"><i data-lucide="chevron-right" aria-hidden="true"></i></button><div class="conf-dots">${dots}</div></section>
+<section class="conf-welcome"><h2>Welcome to ${c.name}</h2><p>On behalf of the ${c.organizer}, it is our great pleasure to host ${c.name} in ${c.location}. The conference brings together researchers and practitioners from around the world to exchange original results and emerging ideas in security and privacy.</p><p>We invite contributions on cryptography, data security, AI security, and related areas, and look forward to welcoming you in ${c.location}.</p></section>
+<section class="conf-topics"><h2>Organizing Committee</h2><p class="conf-subnote">The conference is hosted by the ${c.organizer}.</p><div class="conf-topics-grid">${committee}</div></section>
+<section class="conf-dates"><h2>Key Dates</h2><table><thead><tr><th>Milestone</th><th>Date</th><th>Note</th></tr></thead><tbody><tr><th>Call for Papers</th><td>Open now</td><td>Online submission</td></tr><tr><th>Paper Submission</th><td>To be announced</td><td>${c.name}</td></tr><tr><th>Acceptance Notification</th><td>To be announced</td><td>${c.name}</td></tr><tr><th>Conference</th><td>${c.year}</td><td>${c.location}</td></tr></tbody></table></section>
+<section class="conf-news"><h2>News &amp; Updates</h2><div class="conf-news-card"><h3>Call for Papers</h3><p>Submissions to ${c.name} are invited on cryptography, data security, AI security, and blockchain. Further details will be announced on this page.</p></div><div class="conf-news-card"><h3>Venue</h3><p>${c.name} will be held in ${c.location}, hosted by the ${c.organizer}.</p></div></section>
+<p class="conference-back"><a href="/conference/"><i data-lucide="arrow-left" aria-hidden="true"></i> All conferences</a></p>`;
+}
+export function conferencePages() {
+ const c = HOSTED_CONFERENCE;
+ return {
+  [`/conference/${c.slug}/`]: {
+   label: c.name,
+   section: '/conference/',
+   content: conferenceDetail()
+  }
+ };
+}
+export const conferencePaths = Object.keys(conferencePages()).map(p => p.slice(1, -1));
 export function papersPage() {
  const papers2026 = papers.filter(p => p[0] === 2026);
  const preprints2026 = preprints.filter(p => p[0] === 2026);
