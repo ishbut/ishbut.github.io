@@ -169,12 +169,12 @@ const zhangSupervision = `<h2>Graduate Supervision</h2><p>Dr. Zhang supervises d
 <h2>Prospective Students</h2><p>Motivated students with a serious interest in cryptography and security are welcome to enquire about supervision. Please contact <a href="mailto:hbutzhang@gmail.com">hbutzhang@gmail.com</a> for current opportunities and research topics. The current student roster is shown on the <a href="/teaching/">Members</a> page.</p><p>For university application information, visit the <a href="https://yjs.hbut.edu.cn/" target="_blank" rel="noopener">HBUT Graduate School</a> or the <a href="https://sie.hbut.edu.cn/" target="_blank" rel="noopener">School of International Education</a>.</p>${sourceNote}`;
 // Current student roster provided by the group. Names are English romanisations.
 export const currentStudents = [
- { name: 'Guanghao Gao', degree: "Master's", since: '2025' },
+ { name: 'Guanghao Gao', degree: "Master's", since: '2025', avatar: '/assets/students/guanghao-gao.jpg' },
  { name: 'Jing Gao', degree: "Master's", since: '2024' },
  { name: 'Cunzhi Li', degree: "Master's", since: '2025', avatar: '/assets/students/cunzhi-li.jpg' },
  { name: 'Jilei Li', degree: "Master's", since: '2024' },
  { name: 'Yilin Liu', degree: "Master's", since: '2024' },
- { name: 'Wencan Lu', degree: "Master's", since: '2026' },
+ { name: 'Wencan Lu', degree: "Master's", since: '2026', avatar: '/assets/students/wencai-lu.jpg' },
  { name: 'Dan Luo', degree: "Master's", since: '2026' },
  { name: 'Yunxiao Mu', degree: "Master's", since: '2026', avatar: '/assets/students/yunxiao-mu.jpg' },
  { name: 'Haogang Qin', degree: "Master's", since: '2025', avatar: '/assets/students/haogang-qin.jpg' },
