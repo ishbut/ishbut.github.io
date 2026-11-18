@@ -188,8 +188,6 @@ export const currentStudents = [
  { name: 'Peng Yu', degree: 'Ph.D.', since: '2025' }
 ];
 function currentStudentsBlock() {
- const doctoral = currentStudents.filter(s => s.degree === 'Ph.D.');
- const graduate = currentStudents.filter(s => s.degree !== 'Ph.D.');
  const card = s => {
   const phd = s.degree === 'Ph.D.';
   const initials = s.name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
@@ -198,7 +196,8 @@ function currentStudentsBlock() {
    : `<span class="student-photo student-photo-placeholder" aria-hidden="true">${initials}</span>`;
   return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">(${phd ? 'Ph.D.' : 'Master'} student)</div><div class="student-since">${s.since || '2026'} –</div></div>`;
  };
- return `<div class="student-grid">${[...doctoral, ...graduate].map(card).join('')}</div>`;
+ const sorted = [...currentStudents].sort((a, b) => (a.since || '2026').localeCompare(b.since || '2026') || a.name.localeCompare(b.name));
+ return `<div class="student-grid">${sorted.map(card).join('')}</div>`;
 }
 export const team = `<h1>MEMBERS</h1>
 <h2>Teachers</h2>${memberCards}
