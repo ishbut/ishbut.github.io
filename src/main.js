@@ -1,6 +1,6 @@
-import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail } from 'lucide';
+import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail, Mailbox } from 'lucide';
 
-createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail } });
+createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail, Mailbox } });
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');
