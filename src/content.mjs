@@ -77,7 +77,7 @@ export const home = `<div class="portal">
 // Fields: slug, name, nameEn, role, focus, photo, bio, contact, source, placeholder, detail.
 export const members = [
  {
-  slug: 'mingwu-zhang', name: 'Mingwu Zhang', role: 'Professor • Ph.D.', leader: true,
+  slug: 'mingwu', name: 'Mingwu Zhang', role: 'Professor • Ph.D.', leader: true,
   summary: "Dr. Mingwu Zhang is a professor with the School of Computer Science and Artificial Intelligence in Hubei University of Technology, and the director of Institute of Cyber Security in HBUT. From 2010 to 2012, he has been a JSPS Fellow of Japan Society of Promotion Sciences (JSPS) at Institute of Mathematics for Industry in Kyushu University, Japan. From 2015 to 2016, he has been a Senior Visiting Professor with the School of Computing and Information Technology, University of Wollongong, Australia. His research interests include networks and data security, secure computation and privacy preservation in big-data, AI, clouds and crowdsensing, etc.",
   focus: 'Public-key cryptography, big-data security and privacy, AI security',
   photo: '/assets/mingwu-zhang.png', detail: profile
@@ -120,7 +120,7 @@ function memberPortrait(m) {
  return m.photo ? `<img src="${m.photo}" alt="${m.name}" width="150" height="222">` : `<span class="member-photo-placeholder" aria-hidden="true">${initials}</span>`;
 }
 const memberTags = {
- 'mingwu-zhang': ['Cryptography', 'Data Security'],
+ 'mingwu': ['Cryptography', 'Data Security'],
  'hua-shen': ['AI Security', 'Information Security'],
  'gang-shen': ['Cryptography', 'Data Privacy'],
  'yuanyuan-zhang': ['Authentication', 'Big-data Security']
@@ -194,9 +194,13 @@ function currentStudentsBlock() {
   const photo = s.avatar
    ? `<img class="student-photo" src="${s.avatar}" alt="${s.name}" width="80" height="80">`
    : `<span class="student-photo student-photo-placeholder" aria-hidden="true">${initials}</span>`;
-  return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">(${phd ? 'Ph.D.' : 'Master'} student)</div><div class="student-since">${s.since || '2026'} –</div></div>`;
+  return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">${phd ? 'PhD Candidate' : 'Master student'}</div><div class="student-since">${s.since || '2026'} –</div></div>`;
  };
- const sorted = [...currentStudents].sort((a, b) => (a.since || '2026').localeCompare(b.since || '2026') || a.name.localeCompare(b.name));
+ const sorted = [...currentStudents].sort((a, b) => {
+  const phdA = a.degree === 'Ph.D.' ? 0 : 1;
+  const phdB = b.degree === 'Ph.D.' ? 0 : 1;
+  return phdA - phdB || (a.since || '2026').localeCompare(b.since || '2026') || a.name.localeCompare(b.name);
+ });
  return `<div class="student-grid">${sorted.map(card).join('')}</div>`;
 }
 export const team = `<h1>MEMBERS</h1>
