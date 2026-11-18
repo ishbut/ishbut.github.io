@@ -171,19 +171,19 @@ const zhangSupervision = `<h2>Graduate Supervision</h2><p>Dr. Zhang supervises d
 export const currentStudents = [
  { name: 'Guanghao Gao', degree: "Master's", since: '2025' },
  { name: 'Jing Gao', degree: "Master's", since: '2024' },
- { name: 'Cunzhi Li', degree: "Master's", since: '2025' },
+ { name: 'Cunzhi Li', degree: "Master's", since: '2025', avatar: '/assets/students/cunzhi-li.jpg' },
  { name: 'Jilei Li', degree: "Master's", since: '2024' },
  { name: 'Yilin Liu', degree: "Master's", since: '2024' },
  { name: 'Wencan Lu', degree: "Master's", since: '2026' },
  { name: 'Dan Luo', degree: "Master's", since: '2026' },
- { name: 'Yunxiao Mu', degree: "Master's", since: '2026' },
+ { name: 'Yunxiao Mu', degree: "Master's", since: '2026', avatar: '/assets/students/yunxiao-mu.jpg' },
  { name: 'Haogang Qin', degree: "Master's", since: '2025', avatar: '/assets/students/haogang-qin.jpg' },
  { name: 'Bensheng Wan', degree: "Master's", since: '2024' },
  { name: 'Kewen Wang', degree: "Master's", since: '2026', link: 'https://github.com/Wcowin', avatar: '/assets/students/kewen-wang.jpg' },
  { name: 'Nanyang Wang', degree: "Master's", since: '2025', avatar: '/assets/students/nanyang-wang.jpg' },
  { name: 'Zixiao Xu', degree: "Master's", since: '2024' },
  { name: 'Xinyi Zhang', degree: "Master's", since: '2025' },
- { name: 'Yanrui Zhao', degree: "Master's", since: '2025' },
+ { name: 'Yanrui Zhao', degree: "Master's", since: '2025', avatar: '/assets/students/yanrui-zhao.jpg' },
  { name: 'Xiang Zou', degree: "Master's", since: '2025' },
  { name: 'Peng Yu', degree: 'Ph.D.', since: '2025' }
 ];
