@@ -46,4 +46,12 @@ for (const [path, page] of Object.entries(pages)) {
  await mkdir(dir, { recursive: true });
  await writeFile(`${dir}/index.html`, portableHtml);
 }
-console.log(`Generated ${Object.keys(pages).length} English pages.`);
+const siteUrl = 'https://ishbut.github.io';
+const today = new Date().toISOString().slice(0, 10);
+const urls = Object.keys(pages).map(path => {
+ const loc = siteUrl + (path === '/' ? '/' : path);
+ return `  <url><loc>${loc}</loc><lastmod>${today}</lastmod></url>`;
+}).join('\n');
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+await writeFile('public/sitemap.xml', sitemap);
+console.log(`Generated ${Object.keys(pages).length} English pages and sitemap.xml.`);
