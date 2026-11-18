@@ -5,7 +5,7 @@ const pages = {
  '/research/': { content: research, label: 'Research' },
  '/awards/': { content: awards, label: 'Awards' },
  '/publication/': { content: papersPage() },
- '/conference/': { content: conferencePage() },
+ '/conference/': { content: conferencePage(), label: 'Conferences' },
  ...Object.fromEntries(Object.entries(conferencePages()).map(([path, conf]) => [path, {
   content: conf.content,
   label: conf.label,
