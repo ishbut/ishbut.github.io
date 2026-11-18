@@ -109,11 +109,11 @@ export const members = [
 <h2>Selected Projects</h2><ul><li>Hubei Provincial Natural Science Foundation general project (2023AFB951): key techniques for leakage-resilient homomorphic secret sharing, 2023–2025.</li><li>Hubei Provincial Department of Education project: security of trustworthy federated learning in smart healthcare, 2024–2026.</li></ul>`,
  },
  { slug: 'yuzhu-wang', name: 'Yuzhu Wang', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yuzhu-wang.jpg', placeholder: true },
- { slug: 'yu-chen', name: 'Yu Chen', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yu-chen.jpg', placeholder: true }
+ { slug: 'yu-chen', name: 'Yu Chen', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yu-chen.jpg', placeholder: true, link: 'https://sites.google.com/view/yuchen-net/' }
 ];
-export const memberPaths = members.map(m => `teaching/${m.slug}`);
+export const memberPaths = members.filter(m => !m.link).map(m => `teaching/${m.slug}`);
 export function memberPages() {
- return Object.fromEntries(members.map(m => [`/teaching/${m.slug}/`, { name: m.name, content: memberPage(m), section: '/teaching/' }]));
+ return Object.fromEntries(members.filter(m => !m.link).map(m => [`/teaching/${m.slug}/`, { name: m.name, content: memberPage(m), section: '/teaching/' }]));
 }
 function memberPortrait(m) {
  const initials = m.name.split(' ').map(word => word.charAt(0)).slice(0, 2).join('').toUpperCase();
@@ -127,7 +127,9 @@ const memberTags = {
 };
 function memberCard(m) {
  const tags = memberTags[m.slug] || (m.placeholder ? [] : m.focus.split(/[,;]/).map(s => s.trim()).filter(Boolean).slice(0, 2));
- return `<a class="member-card" href="/teaching/${m.slug}/">${memberPortrait(m)}<div class="member-card-body"><h3>${m.name}</h3>${m.nameEn ? `<p class="member-name-en">${m.nameEn}</p>` : ''}<p class="member-role">${m.role}</p><div class="member-tags">${tags.map(t => `<span class="member-tag">${t}</span>`).join('')}</div></div></a>`;
+ const href = m.link || `/teaching/${m.slug}/`;
+ const external = m.link ? ' target="_blank" rel="noopener"' : '';
+ return `<a class="member-card" href="${href}"${external}>${memberPortrait(m)}<div class="member-card-body"><h3>${m.name}</h3>${m.nameEn ? `<p class="member-name-en">${m.nameEn}</p>` : ''}<p class="member-role">${m.role}</p><div class="member-tags">${tags.map(t => `<span class="member-tag">${t}</span>`).join('')}</div></div></a>`;
 }
 function leaderCard(m) {
  const tags = memberTags[m.slug] || [];
