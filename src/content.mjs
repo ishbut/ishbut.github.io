@@ -97,13 +97,13 @@ export const home = `<div class="portal">
 // Fields: slug, name, nameEn, role, focus, photo, bio, contact, source, placeholder, detail.
 export const members = [
  {
-  slug: 'mingwu', name: 'Mingwu Zhang', role: 'Professor • Ph.D.', leader: true,
+  slug: 'mingwu', name: 'Mingwu Zhang', role: 'Professor, Ph.D.', leader: true,
   summary: "Dr. Mingwu Zhang is a professor with the School of Computer Science and Artificial Intelligence in Hubei University of Technology, and the director of Institute of Cyber Security in HBUT. From 2010 to 2012, he has been a JSPS Fellow of Japan Society of Promotion Sciences (JSPS) at Institute of Mathematics for Industry in Kyushu University, Japan. From 2015 to 2016, he has been a Senior Visiting Professor with the School of Computing and Information Technology, University of Wollongong, Australia. His research interests include public-key cryptosystem, network and data security, secure computation and privacy preservation in big-data, AI, clouds and crowdsensing, etc.",
   focus: 'Public-key cryptography, big-data security and privacy, AI security',
   photo: '/assets/teachers/mingwu-zhang.png', detail: profile
  },
  {
-  slug: 'hua-shen', name: 'Hua Shen', role: 'Professor • Ph.D.',
+  slug: 'hua-shen', name: 'Hua Shen', role: 'Professor, Ph.D.',
   focus: 'AI security, information security, privacy-preserving computation',
   photo: '/assets/teachers/hua-shen.png',
   bio: `<p><strong>Dr. Hua Shen</strong> is a Professor at the Institute of Cyberspace Security at HBUT. She obtained her Ph.D. from Wuhan University in 2014 and was a visiting scholar at the University of Wollongong. She is a senior member of the China Computer Federation and a member of IEEE.</p>
@@ -122,7 +122,7 @@ export const members = [
 </ul></div>`,
  },
  {
-  slug: 'yuanyuan-zhang', name: 'Yuanyuan Zhang', role: 'Associate Professor • Ph.D.',
+  slug: 'yuanyuan-zhang', name: 'Yuanyuan Zhang', role: 'Associate Professor, Ph.D.',
   focus: 'Public-key cryptography, authentication, big-data security and privacy',
   photo: '/assets/teachers/yuanyuan-zhang.png', contact: '276502507@qq.com',
   bio: `<p><strong>Yuanyuan Zhang</strong> is an Associate Professor and Master's Supervisor at HBUT and a Nanhu Scholar. The faculty profile reports more than ten SCI papers as first or corresponding author and more than ten patent applications as first applicant.</p>
@@ -131,15 +131,15 @@ export const members = [
 <h2>Selected Projects and Recognition</h2><ul><li>Principal investigator, NSFC Young Scientists Fund project on leakage-resilient authenticated key exchange.</li><li>Second Prize, Science and Technology Award of the China Institute of Communications; co-chair of ProvSec 2023.</li><li>Member of the Hubei Cyberspace Security Society.</li></ul>`,
  },
  {
-  slug: 'gang-shen', name: 'Gang Shen', role: 'Lecturer • Ph.D.',
+  slug: 'gang-shen', name: 'Gang Shen', role: 'Lecturer, Ph.D.',
   focus: 'Cryptography; data security and privacy in vehicular networks, e-healthcare and AI',
   photo: '/assets/teachers/gang-shen.png',
   bio: `<p><strong>Gang Shen</strong> is a Lecturer and Master's Supervisor at HBUT. The faculty profile records a doctoral degree and reports more than 20 SCI/EI-indexed papers and over 10 granted invention patents.</p>
 <h2>Research and Supervision</h2><p>Cryptography, and data security and privacy protection for vehicular networks, healthcare networks and artificial intelligence.</p>
 <h2>Selected Projects</h2><ul><li>Hubei Provincial Natural Science Foundation general project (2023AFB951): key techniques for leakage-resilient homomorphic secret sharing, 2023–2025.</li><li>Hubei Provincial Department of Education project: security of trustworthy federated learning in smart healthcare, 2024–2026.</li></ul>`,
  },
- { slug: 'yuzhu-wang', name: 'Yuzhu Wang', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yuzhu-wang.jpg', placeholder: true },
- { slug: 'yu-chen', name: 'Yu Chen', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yu-chen.jpg', placeholder: true, link: 'https://sites.google.com/view/yuchen-net/' }
+ { slug: 'yuzhu-wang', name: 'Yuzhu Wang', role: 'Lecturer, Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yuzhu-wang.jpg', placeholder: true },
+ { slug: 'yu-chen', name: 'Yu Chen', role: 'Lecturer, Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yu-chen.jpg', placeholder: true, link: 'https://sites.google.com/view/yuchen-net/' }
 ];
 export const memberPaths = members.filter(m => !m.link).map(m => `staff/${m.slug}`);
 export function memberPages() {
@@ -147,7 +147,7 @@ export function memberPages() {
 }
 function memberPortrait(m) {
  const initials = m.name.split(' ').map(word => word.charAt(0)).slice(0, 2).join('').toUpperCase();
- return m.photo ? `<img src="${m.photo}" alt="${m.name}" width="150" height="222">` : `<span class="member-photo-placeholder" aria-hidden="true">${initials}</span>`;
+ return m.photo ? `<img class="portrait" src="${m.photo}" alt="${m.name}" width="150" height="222">` : `<span class="member-photo-placeholder" aria-hidden="true">${initials}</span>`;
 }
 const memberTags = {
  'mingwu': ['Cryptography', 'Data Security'],
@@ -211,7 +211,7 @@ export const currentStudents = [
  { name: 'Yunxiao Mu', degree: "Master's", since: '2026', avatar: '/assets/students/yunxiao-mu.jpg' },
  { name: 'Haogang Qin', degree: "Master's", since: '2025', avatar: '/assets/students/haogang-qin.jpg' },
  { name: 'Bensheng Wan', degree: "Master's", since: '2024' },
- { name: 'Kewen Wang', degree: "Master's", since: '2026', link: 'https://github.com/Wcowin', avatar: '/assets/students/kewen-wang.jpg' },
+ { name: 'Kewen Wang', degree: "Master's", since: '2026', link: 'https://github.com/Wcowin', avatar: '/assets/students/kewen-wang.jpg', zoom: true, avatarLink: 'https://wcowin.work/about/geren/' },
  { name: 'Nanyang Wang', degree: "Master's", since: '2025', avatar: '/assets/students/nanyang-wang.jpg' },
  { name: 'Zixiao Xu', degree: "Master's", since: '2024' },
  { name: 'Xinyi Zhang', degree: "Master's", since: '2025' },
@@ -223,8 +223,9 @@ function currentStudentsBlock() {
  const card = s => {
   const phd = s.degree === 'Ph.D.';
   const initials = s.name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
+  const avatarImg = `<img class="student-photo${s.zoom ? ' student-photo-zoom' : ''}" src="${s.avatar}" alt="${s.name}" width="80" height="80">`;
   const photo = s.avatar
-   ? `<img class="student-photo" src="${s.avatar}" alt="${s.name}" width="80" height="80">`
+   ? (s.avatarLink ? `<a class="student-photo-link" href="${s.avatarLink}" target="_blank" rel="noopener" aria-label="${s.name}'s website">${avatarImg}</a>` : avatarImg)
    : `<span class="student-photo student-photo-placeholder" aria-hidden="true">${initials}</span>`;
   return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">${phd ? 'PhD Candidate' : 'Master'}, ${s.since || '2026'} –</div></div>`;
  };
