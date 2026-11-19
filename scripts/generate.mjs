@@ -4,7 +4,7 @@ const pages = {
  '/': { content: home },
  '/research/': { content: research, label: 'Research' },
  '/awards/': { content: awards, label: 'Awards' },
- '/publication/': { content: papersPage() },
+ '/publication/': { content: papersPage(), pageClass: 'publications-page' },
  '/conference/': { content: conferencePage(), label: 'Conferences' },
  ...Object.fromEntries(Object.entries(conferencePages()).map(([path, conf]) => [path, {
   content: conf.content,
@@ -12,12 +12,12 @@ const pages = {
   section: conf.section
  }])),
  '/patents/': { content: patents, label: 'Patents' },
- '/teaching/': { content: team },
+ '/staff/': { content: team },
  '/services/': { content: services },
  ...Object.fromEntries(Object.entries(memberPages()).map(([path, member]) => [path, {
   content: member.content,
   title: member.name,
-  section: '/teaching/',
+  section: '/staff/',
   pageClass: 'home-page'
  }]))
 };

@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { memberPaths, conferencePaths } from './src/content.mjs';
-const pages = ['', 'research', 'awards', 'publication', 'conference', 'patents', 'teaching', 'services', ...memberPaths, ...conferencePaths];
+const pages = ['', 'research', 'awards', 'publication', 'conference', 'patents', 'staff', 'services', ...memberPaths, ...conferencePaths];
 
 // Watch content sources during `npm run dev`: regenerate HTML and refresh the page automatically.
 function autoGenerate() {

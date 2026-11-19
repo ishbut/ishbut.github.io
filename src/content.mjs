@@ -4,7 +4,7 @@ export const links = {
   dblp: 'https://dblp.org/pid/28/2422.html',
   cv: '/assets/teachers/mingwu-zhang-cv.pdf',
 };
-export const navigation = [['Home','/'],['Members','/teaching/'],['Publications','/publication/'],['Access','/services/']];
+export const navigation = [['Home','/'],['Members','/staff/'],['Publications','/publication/'],['Access','/services/']];
 export const projects = [
  ['2025–2028','Public-key cryptography with dynamic automata policies for time-series data','National Natural Science Foundation of China (NSFC), General Program','62472150','Principal Investigator'],
  ['2025–2026','Security and privacy protection in machine learning','Industry-sponsored research','','Principal Investigator'],
@@ -65,7 +65,14 @@ const books = [
 ];
 const bookList = `<ul class="book-list">${books.map(b => `<li>${b.cover ? `<img class="book-cover" src="${b.cover}" alt="Cover of ${b.title}" loading="lazy">` : `<span class="book-cover book-cover-placeholder" aria-hidden="true">FCS<br>2026</span>`}<div class="book-info"><div class="book-title">${b.url ? `<a href="${b.url}" target="_blank" rel="noopener">${b.title}</a>` : b.title}</div><div class="book-meta">${b.meta}</div><div class="book-editors">${b.editors}</div></div></li>`).join('')}</ul>`;
 const bookHighlights = `<section class="recent-highlights">${bookList}</section>`;
-const recentHighlights = `<section class="recent-highlights" aria-labelledby="recent-title"><h2 id="recent-title">Recent Group Highlights</h2><ul><li><div class="highlight-title">SAML: A secure anti-money laundering scheme with multi-client functional encryption</div><div class="highlight-authors">P. Yu, Y. Wang, Y. Chen, Q. Ye, M. Zhang</div><div class="highlight-venue"><em>CSS 2026</em> · Best Paper Award</div></li><li><div class="highlight-title">Efficient identity authentication services: an inner product-based one-to-many authentication and key agreement protocol for VANETs</div><div class="highlight-authors">Y. Zhou, Y. Zhu, Z. Qiao, W. Deng, B. Yang, M. Zhang</div><div class="highlight-venue"><em>IEEE Transactions on Vehicular Technology</em> · Online first</div></li><li><div class="highlight-title">PPOM-Attack: A substitute model-free perturbation prediction and optimization method for black-box adversarial attack against face recognition</div><div class="highlight-authors">K. Cheng, J. Zhang, H. Li, Z. Zhong, M. Zhang, Z. Qin</div><div class="highlight-venue"><em>IEEE Transactions on Information Forensics and Security</em>, 2026</div></li><li><div class="highlight-title">CLR-IA: An efficient identity authentication protocol with continuous leakage resilience for mobile edge computing</div><div class="highlight-authors">Y. Zhou, Y. Zhu, Z. Qiao, X. Liu, G. Zhang, B. Yang, T. Zhu, M. Zhang</div><div class="highlight-venue"><em>IEEE Transactions on Dependable and Secure Computing</em>, 2026</div></li><li><div class="highlight-title">Privacy-preserving federated learning via secret sharing and multi-key homomorphic encryption</div><div class="highlight-authors">Y. Wang, F. Inoue, Y. Gu, X. Shen, M. Zhang</div><div class="highlight-venue"><em>Information Sciences</em>, 2026</div></li></ul><p><a href="/publication/">See recent publications <i class="inline-icon" data-lucide="arrow-right" aria-hidden="true"></i></a></p></section>`;
+const recentHighlights = `<section class="recent-highlights" aria-labelledby="recent-title"><h2 id="recent-title">News and Events</h2><ul class="news-list">
+<li><strong>Oct 2026</strong> Our cooperated paper "Efficient identity authentication services: an inner product-based one-to-many authentication and key agreement protocol for VANETs" was accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=25" target="_blank" rel="noopener">IEEE-TVT</a>! Congratulations!</li>
+<li><strong>Aug 2026</strong> Our paper titled "SAML: A secure anti-money laundering scheme with multi-client functional encryption" accepted in <a href="https://nsclab.org/css2026/list.html" target="_blank" rel="noopener">CSS 2026</a> won the Best Student Paper Award! Congratulations!</li>
+<li><strong>Aug 2026</strong> Lab successfully organized the 9th International Conference on Frontiers in Cyber Security (<a href="https://ishbut.github.io/fcs2026/" target="_blank" rel="noopener">FCS 2026</a>) in Macau.</li>
+<li><strong>Aug 2026</strong> Our paper "Privacy-preserving federated learning via secret sharing and multi-key homomorphic encryption" was accepted by <a href="https://doi.org/10.1016/j.ins.2026.123619" target="_blank" rel="noopener">Information Sciences</a>! Congratulations!</li>
+<li><strong>Feb 2026</strong> Our paper "PPOM-Attack: A substitute model-free perturbation prediction and optimization method for black-box adversarial attack against face recognition" was accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206" target="_blank" rel="noopener">IEEE TIFS</a>! Congratulations!</li>
+<li><strong>Jan 2026</strong> Our paper "CLR-IA: An efficient identity authentication protocol with continuous leakage resilience for mobile edge computing" was accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8858" target="_blank" rel="noopener">IEEE TDSC</a>! Congratulations!</li>
+</ul></section>`;
 const profile = `<div class="home-layout">
 <aside class="profile-sidebar" aria-label="Contact information">
 <img class="portrait" src="/assets/teachers/mingwu-zhang.png" alt="Professor Mingwu Zhang" width="150" height="222">
@@ -84,9 +91,9 @@ ${bookHighlights}</div></article></div>`;
 export const home = `<div class="portal">
 <section class="keyword-banner" aria-label="Research keywords"><div class="keyword-cloud"><span class="kw-xl">CRYPTOGRAPHY</span><span class="kw-sm">FUNCTIONAL ENCRYPTION</span><span class="kw-md">LEAKAGE RESILIENCE</span><span class="kw-xl">PRIVACY</span><span class="kw-sm">FEDERATED LEARNING</span><span class="kw-lg">ARTIFICIAL INTELLIGENCE SECURITY</span><span class="kw-md">SECURE COMPUTATION</span><span class="kw-sm">AUTHENTICATION</span><span class="kw-xl">DATA SECURITY</span><span class="kw-md">CLOUD COMPUTING</span><span class="kw-sm">BIG-DATA PRIVACY</span><span class="kw-lg">BLOCKCHAIN</span><span class="kw-sm">OUTSOURCED COMPUTATION</span><span class="kw-md">INTERNET OF THINGS SECURITY</span><span class="kw-sm">VEHICULAR NETWORKS</span><span class="kw-lg">SECURE DATA SHARING</span><span class="kw-sm">INDUSTRIAL INTERNET</span><span class="kw-md">PRIVACY-PRESERVING MACHINE LEARNING</span><span class="kw-md">VULNERABILITIES</span></div></section>
 <p class="portal-tagline">Institute of Cyberspace Security</p>
-<section class="portal-section">${recentHighlights.replace('Recent Group Highlights', 'Highlights')}</section>
+<section class="portal-section">${recentHighlights}</section>
 </div>`;
-// Group member records. Add a member here to create /teaching/<slug>/ automatically.
+// Group member records. Add a member here to create /staff/<slug>/ automatically.
 // Fields: slug, name, nameEn, role, focus, photo, bio, contact, source, placeholder, detail.
 export const members = [
  {
@@ -99,10 +106,20 @@ export const members = [
   slug: 'hua-shen', name: 'Hua Shen', role: 'Professor • Ph.D.',
   focus: 'AI security, information security, privacy-preserving computation',
   photo: '/assets/teachers/hua-shen.png',
-  bio: `<p><strong>Hua Shen</strong> is a Professor and Master's Supervisor in the Institute of Cyberspace Security at HBUT. The faculty profile records a Ph.D. from Wuhan University (2014), a visiting scholarship at the University of Wollongong, senior membership of the China Computer Federation, and IEEE membership.</p>
-<h2>Research and Supervision</h2><p>AI security, information security, privacy-preserving computation and privacy protection. The profile lists supervision in information security, privacy computing and privacy protection for Computer Science and Technology / Electronic Information.</p>
-<h2>Teaching</h2><p>Provable Security; Data Structures; Operating System Principles and Security; Cryptography Principles and Applications; Industrial Big Data Security and Privacy Protection.</p>
-<h2>Selected Projects</h2><ul><li>NSFC Young Scientists Fund: privacy-preserving data aggregation for massive-data analysis.</li><li>Hubei Provincial Department of Education key project: privacy-protection mechanisms for smart grids.</li><li>HBUT Green Industry Technology Leading Program: privacy protection for industrial big data published by small and medium-sized enterprises.</li></ul>`,
+  bio: `<p><strong>Dr. Hua Shen</strong> is a Professor at the Institute of Cyberspace Security at HBUT. She obtained her Ph.D. from Wuhan University in 2014 and was a visiting scholar at the University of Wollongong. She is a senior member of the China Computer Federation and a member of IEEE.</p>
+<div class="publication-year"><h2>Publications</h2><ul>
+<li class="paper"><div class="paper-title">Privacy-preserving E-questionnaire protocol for massive user environments.</div><div class="paper-authors">H Shen, R Chen, Z Xia, W Susilo, M Zhang</div><div class="paper-venue"><em>Information Sciences</em>, doi: 10.1016/j.ins.2026.124101</div></li>
+<li class="paper"><div class="paper-title">An Efficient Graph Encryption Scheme Supporting Shortest Path Fuzzy Queries.</div><div class="paper-authors">H Shen, C Yu, W Susilo, Y Chen, M Zhang</div><div class="paper-venue"><em>IEEE Transactions on Information Forensics and Security</em>, doi: 10.1109/TIFS.2025.3599388</div></li>
+<li class="paper"><div class="paper-title">EAPIR: Efficient and Authenticated Private Information Retrieval with Fast Server Processing.</div><div class="paper-authors">H Shen, X Li, F Zhen, G Wu, M Zhang</div><div class="paper-venue"><em>ACISP 2025</em>, doi: 10.1007/978-981-96-9101-2_20</div></li>
+<li class="paper"><div class="paper-title">L-Net: A Lightweight Convolutional Neural Network for Devices with Low Computing Power.</div><div class="paper-authors">H Shen, Z Wang, J Zhang, M Zhang</div><div class="paper-venue"><em>Information Sciences</em>, doi: 10.1016/j.ins.2024.120131</div></li>
+<li class="paper"><div class="paper-title">Data-Matching-Based Privacy-Preserving Statistics and Its Applications in Digital Publishing Industry.</div><div class="paper-authors">H Shen, G Wu, W Susilo, M Zhang</div><div class="paper-venue"><em>IEEE Transactions on Services Computing</em>, doi: 10.1109/TSC.2023.3326497</div></li>
+<li class="paper"><div class="paper-title">A Privacy-Preserving and Verifiable Statistical Analysis Scheme for an E-Commerce Platform.</div><div class="paper-authors">H Shen, G Wu, Z Xia, W Susilo, M Zhang</div><div class="paper-venue"><em>IEEE Transactions on Information Forensics and Security</em>, doi: 10.1109/TIFS.2023.3269669</div></li>
+<li class="paper"><div class="paper-title">Data Release for Machine Learning via Correlated Differential Privacy.</div><div class="paper-authors">H Shen, J Li, G Wu, M Zhang</div><div class="paper-venue"><em>Information Processing and Management</em>, doi: 10.1016/j.ipm.2023.103349</div></li>
+<li class="paper"><div class="paper-title">A cloud-aided privacy-preserving multi-dimensional data comparison protocol.</div><div class="paper-authors">H Shen, M Zhang, H Wang, F Guo, W Susilo</div><div class="paper-venue"><em>Information Sciences</em>, doi: 10.1016/j.ins.2020.09.052</div></li>
+<li class="paper"><div class="paper-title">A lightweight privacy-preserving fair meeting location determination scheme.</div><div class="paper-authors">H Shen, M Zhang, H Wang, F Guo, W Susilo</div><div class="paper-venue"><em>IEEE Internet of Things Journal</em>, doi: 10.1109/JIOT.2020.2965065</div></li>
+<li class="paper"><div class="paper-title">An Efficient Aggregation Scheme Resisting on Malicious Data Mining Attacks for Smart Grid.</div><div class="paper-authors">H Shen, Y Liu, Z Xia, M Zhang</div><div class="paper-venue"><em>Information Sciences</em>, doi: 10.1016/j.ins.2020.03.107</div></li>
+<li class="paper"><div class="paper-title">Efficient Privacy-Preserving Cube-Data Aggregation Scheme for Smart Grids.</div><div class="paper-authors">H Shen, M Zhang, J Shen</div><div class="paper-venue"><em>IEEE Transactions on Information Forensics and Security</em>, doi: 10.1109/TIFS.2017.2656475</div></li>
+</ul></div>`,
  },
  {
   slug: 'yuanyuan-zhang', name: 'Yuanyuan Zhang', role: 'Associate Professor • Ph.D.',
@@ -124,9 +141,9 @@ export const members = [
  { slug: 'yuzhu-wang', name: 'Yuzhu Wang', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yuzhu-wang.jpg', placeholder: true },
  { slug: 'yu-chen', name: 'Yu Chen', role: 'Lecturer • Ph.D.', focus: 'Profile to be added', photo: '/assets/teachers/yu-chen.jpg', placeholder: true, link: 'https://sites.google.com/view/yuchen-net/' }
 ];
-export const memberPaths = members.filter(m => !m.link).map(m => `teaching/${m.slug}`);
+export const memberPaths = members.filter(m => !m.link).map(m => `staff/${m.slug}`);
 export function memberPages() {
- return Object.fromEntries(members.filter(m => !m.link).map(m => [`/teaching/${m.slug}/`, { name: m.name, content: memberPage(m), section: '/teaching/' }]));
+ return Object.fromEntries(members.filter(m => !m.link).map(m => [`/staff/${m.slug}/`, { name: m.name, content: memberPage(m), section: '/staff/' }]));
 }
 function memberPortrait(m) {
  const initials = m.name.split(' ').map(word => word.charAt(0)).slice(0, 2).join('').toUpperCase();
@@ -140,17 +157,17 @@ const memberTags = {
 };
 function memberCard(m) {
  const tags = memberTags[m.slug] || (m.placeholder ? [] : m.focus.split(/[,;]/).map(s => s.trim()).filter(Boolean).slice(0, 2));
- const href = m.link || `/teaching/${m.slug}/`;
+ const href = m.link || `/staff/${m.slug}/`;
  const external = m.link ? ' target="_blank" rel="noopener"' : '';
  return `<a class="member-card" href="${href}"${external}>${memberPortrait(m)}<div class="member-card-body"><h3>${m.name}</h3>${m.nameEn ? `<p class="member-name-en">${m.nameEn}</p>` : ''}<p class="member-role">${m.role}</p><div class="member-tags">${tags.map(t => `<span class="member-tag">${t}</span>`).join('')}</div></div></a>`;
 }
 function leaderCard(m) {
  const tags = memberTags[m.slug] || [];
- return `<a class="member-leader" href="/teaching/${m.slug}/"><img src="${m.photo}" alt="${m.name}" width="150" height="222"><div class="member-leader-body"><h3>${m.name}</h3><p class="member-role">${m.role}</p><p class="member-leader-bio">${m.summary}</p><div class="member-tags">${tags.map(t => `<span class="member-tag">${t}</span>`).join('')}</div></div></a>`;
+ return `<a class="member-leader" href="/staff/${m.slug}/"><img src="${m.photo}" alt="${m.name}" width="150" height="222"><div class="member-leader-body"><h3>${m.name}</h3><p class="member-role">${m.role}</p><p class="member-leader-bio">${m.summary}</p><div class="member-tags">${tags.map(t => `<span class="member-tag">${t}</span>`).join('')}</div></div></a>`;
 }
 export const memberCards = `${leaderCard(members[0])}<div class="member-grid">${members.slice(1).map(memberCard).join('')}</div>`;
 function memberPage(m) {
- const breadcrumb = `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/teaching/">Members</a><span aria-hidden="true">/</span><span aria-current="page">${m.name}</span></nav>`;
+ const breadcrumb = `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/staff/">Members</a><span aria-hidden="true">/</span><span aria-current="page">${m.name}</span></nav>`;
  if (m.detail) {
   const detail = m.detail.replace('Recent Group Highlights', 'Highlights');
   return `${breadcrumb}${detail}`;
@@ -175,13 +192,13 @@ ${ul(['FCS 2024','ACISP 2018','Inscrypt 2018','EIDWT 2017'])}
 <h2>Faculty Profile: Academic Writing and Graduate Supervision</h2><ul class="dated-list"><li><span>2023</span><div>Outstanding Master's Thesis Supervisor, Hubei Commercial Cryptography Association.</div></li><li><span>2022</span><div>Outstanding Master's Thesis Supervisor, inaugural award of the Hubei Cyberspace Security Society.</div></li><li><span>2021</span><div>Outstanding Academic Monograph in Cyberspace Security, Hubei Province.</div></li></ul>${sourceNote}`;
 export const patents = `<h1>PATENTS</h1><h2>Intellectual Property and Technology Transfer</h2><p>Group faculty work on intellectual property development and the transfer of research outcomes into practice. The table below reproduces aggregate figures from Professor Mingwu Zhang's April 2025 faculty profile; they describe his recorded outputs, not a group-wide total.</p>
 <table><caption>Aggregate figures reported in Professor Mingwu Zhang's April 2025 faculty profile</caption><thead><tr><th scope="col">Category</th><th scope="col">Reported outcome</th></tr></thead><tbody><tr><th scope="row">Patent applications</th><td>More than 90</td></tr><tr><th scope="row">Patent technology transfers</th><td>6</td></tr><tr><th scope="row">Software copyrights</th><td>More than 30</td></tr><tr><th scope="row">Industry standards</th><td>Participation in 3 standards</td></tr></tbody></table>
-<h2>Faculty Patent Records</h2><p>Linked faculty profiles also report granted invention patents and patent applications by group members, including Hua Shen (privacy-preserving data processing and smart grids), Gang Shen (V2G authentication and online medical diagnosis), and Yuanyuan Zhang (authentication and key agreement). See their <a href="/teaching/">profiles</a> for details.</p><p class="source-note">From linked HBUT faculty profiles, checked 9 November 2026.</p>
+<h2>Faculty Patent Records</h2><p>Linked faculty profiles also report granted invention patents and patent applications by group members, including Hua Shen (privacy-preserving data processing and smart grids), Gang Shen (V2G authentication and online medical diagnosis), and Yuanyuan Zhang (authentication and key agreement). See their <a href="/staff/">profiles</a> for details.</p><p class="source-note">From linked HBUT faculty profiles, checked 9 November 2026.</p>
 <h2>Research and Industry</h2><p>Industry-sponsored projects listed in Professor Mingwu Zhang's faculty profile include security and privacy in machine learning; malicious audio and video traffic detection; secure chips and card issuance systems for color printing; analysis of malicious blockchain transactions; and secure office cloud and big-data analytics platforms.</p><p>Related funded research is listed on the <a href="/research/">Research</a> page.</p>
-<h2>Patent and Collaboration Enquiries</h2><p>For patent records, licensing information, or research collaboration, contact the group at hbutzhang(at)gmail.com (Professor Mingwu Zhang) or consult individual <a href="/teaching/">faculty profiles</a>.</p><p class="source-note">The public faculty profile gives aggregate figures without an itemized patent register. These figures describe applications and transfers, and do not imply that all applications have been granted.</p>${sourceNote}`;
+<h2>Patent and Collaboration Enquiries</h2><p>For patent records, licensing information, or research collaboration, contact the group at hbutzhang(at)gmail.com (Professor Mingwu Zhang) or consult individual <a href="/staff/">faculty profiles</a>.</p><p class="source-note">The public faculty profile gives aggregate figures without an itemized patent register. These figures describe applications and transfers, and do not imply that all applications have been granted.</p>${sourceNote}`;
 const zhangSupervision = `<h2>Graduate Supervision</h2><p>Dr. Zhang supervises doctoral and master's students at Hubei University of Technology. Supervision areas listed in the university faculty profile include:</p><table><thead><tr><th scope="col">Degree</th><th scope="col">Fields and Research Areas</th></tr></thead><tbody><tr><th scope="row">Doctoral</th><td>Electrical Engineering; smart-grid security; Internet of Vehicles security</td></tr><tr><th scope="row">Academic Master's</th><td>Computer Science and Technology; Cyberspace Security</td></tr><tr><th scope="row">Professional Master's</th><td>Electronic Information / Computer Application Technology</td></tr></tbody></table>
 <h2>Research Directions</h2>${ul(['Network and information security','Big-data security and privacy protection','Blockchain and industrial Internet security','Artificial intelligence security'])}
 <h2>Recent Student Achievement</h2><p>${awardDescription}</p>
-<h2>Prospective Students</h2><p>Motivated students with a serious interest in cryptography and security are welcome to enquire about supervision. Please contact hbutzhang(at)gmail.com for current opportunities and research topics. The current student roster is shown on the <a href="/teaching/">Members</a> page.</p><p>For university application information, visit the <a href="https://yjs.hbut.edu.cn/" target="_blank" rel="noopener">HBUT Graduate School</a> or the <a href="https://sie.hbut.edu.cn/" target="_blank" rel="noopener">School of International Education</a>.</p>${sourceNote}`;
+<h2>Prospective Students</h2><p>Motivated students with a serious interest in cryptography and security are welcome to enquire about supervision. Please contact hbutzhang(at)gmail.com for current opportunities and research topics. The current student roster is shown on the <a href="/staff/">Members</a> page.</p><p>For university application information, visit the <a href="https://yjs.hbut.edu.cn/" target="_blank" rel="noopener">HBUT Graduate School</a> or the <a href="https://sie.hbut.edu.cn/" target="_blank" rel="noopener">School of International Education</a>.</p>${sourceNote}`;
 // Current student roster provided by the group. Names are English romanisations.
 export const currentStudents = [
  { name: 'Guanghao Gao', degree: "Master's", since: '2025', avatar: '/assets/students/guanghao-gao.jpg' },
