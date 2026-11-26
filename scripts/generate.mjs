@@ -31,7 +31,13 @@ for (const [path, page] of Object.entries(pages)) {
   ? `${page.title} — Group member profile, Institute of Cyberspace Security, Hubei University of Technology.`
   : `${navTitle} — Institute of Cyberspace Security, Hubei University of Technology. Research in cryptography, data security, privacy and AI security.`;
  const pageClass = page.pageClass || (path === '/' ? 'home-page' : 'inner-page');
- const nav = navigation.map(([name, url]) => `<a href="${url}"${url === active ? ' class="active" aria-current="page"' : ''}>${name}</a>`).join('');
+ const nav = navigation.map(([name, url]) => {
+  if (name === 'Members') {
+   const activeCls = active === url ? ' active' : '';
+   return `<div class="nav-dropdown"><a href="${url}"${activeCls ? ' class="active" aria-current="page"' : ''}>Members</a><button class="nav-dropdown-toggle" aria-label="Toggle Members menu" aria-expanded="false"><i data-lucide="chevron-down" aria-hidden="true"></i></button><div class="nav-dropdown-menu"><a href="${url}"${activeCls ? ' class="active" aria-current="page"' : ''}>Members</a><span class="nav-dropdown-placeholder">Former Members</span></div></div>`;
+  }
+  return `<a href="${url}"${url === active ? ' class="active" aria-current="page"' : ''}>${name}</a>`;
+ }).join('');
  const html = `<!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${headTitle}</title><meta name="description" content="${description}"><meta name="theme-color" content="#20466f"><link rel="preload" href="/assets/aldrich.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="/assets/research-keywords-bg.webp" as="image"><link rel="icon" type="image/png" href="/assets/hbut-seal.png"><link rel="stylesheet" href="/src/style.css"><script type="module" src="/src/main.js"></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a>

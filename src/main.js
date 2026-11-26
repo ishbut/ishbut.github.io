@@ -1,6 +1,29 @@
-import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail, Mailbox } from 'lucide';
+import { createIcons, ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, ChevronDown, MapPin, Mail, Mailbox } from 'lucide';
 
-createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, MapPin, Mail, Mailbox } });
+createIcons({ icons: { ArrowUp, ArrowUpRight, ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, ChevronDown, MapPin, Mail, Mailbox } });
+
+const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+if (dropdownToggle) {
+  const dropdown = dropdownToggle.closest('.nav-dropdown');
+  dropdownToggle.addEventListener('click', event => {
+    event.stopPropagation();
+    const open = dropdown.classList.toggle('is-open');
+    dropdownToggle.setAttribute('aria-expanded', String(open));
+    if (open && window.innerWidth <= 700) {
+      const menu = dropdown.querySelector('.nav-dropdown-menu');
+      const rect = dropdown.getBoundingClientRect();
+      menu.style.top = `${rect.bottom + 4}px`;
+      menu.style.left = `${Math.max(8, rect.left)}px`;
+      menu.style.transform = 'none';
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove('is-open');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');

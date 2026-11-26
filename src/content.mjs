@@ -219,7 +219,7 @@ const zhangSupervision = `<h2>Graduate Supervision</h2><p>Dr. Zhang supervises d
 // Current student roster provided by the group. Names are English romanisations.
 export const currentStudents = [
  { name: 'Guanghao Gao', degree: "Master's", since: '2025', avatar: '/assets/students/guanghao-gao.jpg' },
- { name: 'Jing Gao', degree: "Master's", since: '2024' },
+ { name: 'Jing Gao', degree: "Master's", since: '2024', avatar: '/assets/students/jing-gao.jpg' },
  { name: 'Cunzhi Li', degree: "Master's", since: '2025', avatar: '/assets/students/cunzhi-li.jpg' },
  { name: 'Jilei Li', degree: "Master's", since: '2024' },
  { name: 'Yilin Liu', degree: "Master's", since: '2024' },
