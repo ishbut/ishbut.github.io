@@ -235,7 +235,7 @@ function currentStudentsBlock() {
   const photo = s.avatar
    ? (s.avatarLink ? `<a class="student-photo-link" href="${s.avatarLink}" target="_blank" rel="noopener" aria-label="${s.name}'s website">${avatarImg}</a>` : avatarImg)
    : `<span class="student-photo student-photo-placeholder" aria-hidden="true">${initials}</span>`;
-  return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">${phd ? 'PhD Candidate' : 'Master'}, ${s.since || '2026'} –</div></div>`;
+  return `<div class="student-card${phd ? ' student-card-phd' : ''}">${photo}<h3>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.name}</a>` : s.name}</h3><div class="student-degree">${phd ? 'PhD Candidate' : 'Msc Student'}, ${s.since || '2026'} –</div></div>`;
  };
  const sorted = [...currentStudents].sort((a, b) => {
   const phdA = a.degree === 'Ph.D.' ? 0 : 1;
